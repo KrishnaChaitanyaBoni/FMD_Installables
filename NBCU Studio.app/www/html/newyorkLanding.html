@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+<title>NBC New York</title>
+    <link href="../css/common/common.css" rel="stylesheet" type="text/css" />
+    <link href="../css/services/landingpages.css" rel="stylesheet" type="text/css" />
+    <link href="../css/common/gradients.css" rel="stylesheet" type="text/css" />
+<link href="../css/animate/animate.css" rel="stylesheet" type="text/css" />    
+<script type="text/javascript" src="../js/lib/cordova-1.9.0.js"></script>
+<script type="text/javascript" src="../js/lib/ChildBrowser.js"></script>
+<script type="text/javascript" src="../js/lib/ChildBrowser_android.js"></script>
+<script src="../js/lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery.slimscroll.js"></script>
+<script src="../js/service/appUpdate.js"></script>
+<script src="../js/ui/navigation.js"></script>
+<script src="../js/ui/footer.js"></script>
+<script src="../js/db/dBHelper.js"></script>
+<script src="../js/service/directoryServices.js"></script>
+<script src="../js/lib/SMSComposer.js"></script>
+<script src="../js/lib/EmailComposer.js"></script>
+<script src="../js/lib/Screenshot.js"></script>
+<script>$(document).ready(function(){$("footer nav .facilityHome a").addClass("facilityHomeHover");
+                          $(".newyorkBackV2").bind('touchstart', function(){
+                                                   $(".newyorkBackV2").addClass("newyorkBackV2Roll");setTimeout(function () {$(".newyorkBackV2").removeClass("newyorkBackV2Roll")},200);
+                                                   });
+                          
+                          $(".newyorkHeadericonV2").bind('touchstart', function(){
+                                                         $(".newyorkHeadericonV2").addClass("newyorkHeadericonV2Roll");setTimeout(function () {$(".newyorkHeadericonV2").removeClass("newyorkHeadericonV2Roll")},200);
+                                                         });
+                          
+                          $(".mailIcon img, .mail a").bind('touchstart', function(){
+                                                  $('.mailIcon img').attr('src','../images/newyork/roll/emailicon_newyork.png');
+                                                  setTimeout(function () {$('.mailIcon img').attr('src','../images/newyork/emailicon_newyork.png');},200);
+                                                  });
+                         
+                        $(".callIcon img, .call a").bind('touchstart', function(){
+                                  $('.callIcon img').attr('src','../images/newyork/roll/callicon_newyork.png');
+                                  setTimeout(function () {$('.callIcon img').attr('src','../images/newyork/callicon_newyork.png');},200);
+                                  });
+                          
+                          });
+    </script>
+</head>
+<body class="newyorkBackground" onload="setCurrentPageNewyork();parseInfo();initDB();">
+<!--Header section-->
+    <header class="headergradiant">
+        <div class="headerInnerCover">
+            <div id="headerBackHideDiv" class="headerBackHide"></div>
+            
+          <!--  <div  id="backButtonDiv" class="headerBack newyorkBackV2" onclick="javascript:history.back()"></div>-->
+            
+            <span class="headings newyorkTXTColor">NBC New York</span>
+            <div class="headerIcon Mleft20"><a class="newyorkHeadericonV2" ></a></div>
+        </div>
+        <!--Header nav popup-->
+        <div class="homeNav">
+            <div class="homeNavinner">
+                <div class="homeNavArrow"><img src="../images/common/homeNavArrow.png"/></div>
+                <div class="homeNavUniversal" >Universal Studios</div>
+                <div class="homeNavChicago" >Chicago</div>
+            </div>
+        </div>
+        <!--Header nav popup end-->
+    </header>
+<!--Header section end-->
+
+<!--wrapper section--->
+<div id="wrapper" class="newyorkWrapperBG">
+<div class="wrapperinner" id="scrollDiv">
+<div class="universalContact">
+		<div class="generalContactGradient backlotCntinner">
+    		<div class="fLEFT Mleft14 Mtop2 font14 cnt">General Contact Information:</div>
+            
+       	  	<div class="call"><a href="tel:1.212.664.2013">1.212.664.2013</a></div>	
+          	<div class="callIcon"><a href="tel:1.212.664.2013"><img src="../images/newyork/callicon_newyork.png" /></a></div>
+            <div class="mail"><a href ="mailto:marybeth.scalici@nbcuni.com">marybeth.scalici@nbcuni.com</a></div>
+            <div class="mailIcon"><a href="mailto: marybeth.scalici@nbcuni.com"><img src="../images/newyork/emailicon_newyork.png" /></a></div>
+        </div>
+</div>
+
+<!--content cover--->
+<div class="wrapperCNTcover">
+	
+	<div class="UNICarouselcover">
+    <div class="UNICarouselinner">
+		<div class="newyorkCarousel"></div>
+    </div>
+    </div>
+	
+	<div class="UNIlistcover ">
+		<ul>
+			          
+            <li  class="iphBgLi ipadBgLi">
+                <div class="listinner">
+                    <a href="departmentServicesNewyork.html"  onclick='setDepartmentServicename("Production Services","New York");' class="cntlink">
+                        <div class="uniThumb"><img src="../images/universal/productionservices.jpg"/></div>
+                        <div class="uniContentCover">
+                            
+                            <p>Production Services</p>
+                            <div class="cnt">NBC New York features makeup and prosthetics, costume and property departments on site to assist with your production and special events needs.
+                            </div>
+                            
+                        </div>            
+                        <span class="rightarrow"><img src="../images/common/icon6Bottom.png" /></span>
+                    </a>
+                </div>
+            </li>  
+			
+			<li  class="iphBgLi ipadBgLi">
+                <div class="listinner">
+                    <a href="soundstageNewyork.html"  class="cntlink">
+                        <div class="uniThumb"><img src="../images/universal/soundstage.jpg"/></div>
+                        <div class="uniContentCover">
+                            <p>Sound Stages</p>
+                            <div class="cnt">NBC New York is the home of the Today Show, NBC Nightly News, MSNBC and Saturday Night Live. Has 9 sound stages ranging from 1,000 - 10,000 sqft.
+                            </div>
+                        </div>            
+                        <span class="rightarrow"><img src="../images/common/icon6Bottom.png" /></span>
+                    </a>
+                </div>
+            </li> 
+            <li  class="ipadBgLi">
+                <div class="listinner">
+                    <a href="departmentServicesNewyork.html"  onclick='setDepartmentServicename("Post Production Media Services","New York");'class="cntlink">
+                        <div class="uniThumb"><img src="../images/universal/postproduction.jpg"/></div>
+                        <div class="uniContentCover">
+                            <p>Post Production Media 
+                            Services</p>
+                            <div class="cnt">30 Rock has editing rooms equipped with a variety of hardware and software. ArtWorks, can accommodate any project including print, 3D and more.
+                            </div>
+                        </div>            
+                        <span class="rightarrow"><img src="../images/common/icon6Bottom.png" /></span>
+                    </a>
+                </div>
+            </li> 
+            
+            <li  class="ipadBgLi newyorklastLI">
+                <div class="listinner">
+                    <a href="departmentServicesNewyork.html"  onclick='setDepartmentServicename("Special Events","New York");' class="cntlink">
+                        <div class="uniThumb"><img src="../images/universal/specialevents.jpg"/></div>
+                        <div class="uniContentCover">
+                            <p>Special Events</p>
+                            <div class="cnt">NBC New York has a variety of possibilities to accommodate your special event needs.
+                            </div>
+                            </div>            
+                        <span class="rightarrow"><img src="../images/common/icon6Bottom.png" /></span>
+                    </a>
+                </div>
+            </li> 
+          </ul>
+    </div>
+</div>
+<!--content cover end--->
+</div>
+</div>
+
+<!--wrapper section end--->
+
+<!--footer section-->
+<script language="javascript">
+if (platform.iphone) {
+	document.write('<footer class="bottomGradient"><nav style="position:relative;"><div class="facilityHome"><a  onclick="getCurrentLandingPage()">Facility Home</a></div><div class="share" onclick="captureScreenshot();"><a>Send</a></div><div class="directory"><a onclick="loadDirectory();">Directory</a></div><div class="map" onclick="openMap();"><a >Map</a></div><div class="aboutus"><a href="aboutus.html">About Us</a></div><div class="privacy"><a  onclick="showPolicy()">Privacy Policy</a></div><div class="website"><a onclick="loadURL();">Website</a></div><div class="drive" onclick="openLot();"><a href ="#">Before you<br>get here</a></div><div class="idea"><a href ="mailto: studio.operations2@nbcuni.com">Have an idea?</a></div><div class="more" ><a>More</a></div><section class="moreTooltip"><section class="moreTooltipinner"><section class="moreTooltipiconcover"><section class="Tooltipicon popidea"><a href ="mailto: studio.operations2@nbcuni.com"><br>Have an idea?</a></section><section class="Tooltipicon popDrive" onclick="openLot();"><a href ="#"><br>Before you<br>get here</a></section><section class="Tooltipicontop popWebsite" ><a onclick="loadURL();"><br>Website</a></section><section class="Tooltipicontop popPrivacy" ><a  onclick="showPolicy()"><br>Privacy Policy</a></section><section class="Tooltipicon popAboutus"><a href="aboutus.html"><br>About Us</a></section></section><section class="dwnssArrrow"></section></section></section><section class="sendTooltip"><section class="moreTooltipinner"><section class="moreTooltipiconcover"><section class="sendtipicon popSMS" onclick="sendSMS();"><a ><br>SMS</a></section><section class="sendtipicon popMail" onclick="takeScreenShot(mailSubject,mailBody,true,toEMail);"><a ><br>Email</a></section></section><section class="dwnssArrrow"></section></section></section></nav></footer>')
+	}
+		else  {
+			 document.write('<footer class="bottomGradient"><nav style="position:relative;"><div class="facilityHome"><a  onclick="getCurrentLandingPage()">Facility Home</a></div><div class="share" onclick="captureScreenshot();"><a>Send</a></div><div class="directory"><a onclick="loadDirectory();">Directory</a></div><div class="map" onclick="openMap();" ><a >Map</a></div><div class="aboutus"><a href="aboutus.html">About Us</a></div><div class="privacy"><a  onclick="showPolicy()">Privacy Policy</a></div><div class="website"><a onclick="loadURL();">Website</a></div><div class="drive" onclick="openLot();"><a href ="#">Before you<br>get here</a></div><div class="idea"><a href ="mailto: studio.operations2@nbcuni.com">Have an idea?</a></div><div class="more" ><a>More</a></div><section class="moreTooltip"><section class="moreTooltipinner"><section class="moreTooltipiconcover"><section class="Tooltipicon popidea"><a href ="mailto: studio.operations2@nbcuni.com"><br>Have an idea?</a></section><section class="Tooltipicon popDrive" onclick="openLot();"><a href ="#"><br>Before you<br>get here</a></section><section class="Tooltipicontop popWebsite" ><a onclick="loadURL();"><br>Website</a></section><section class="Tooltipicontop popPrivacy" ><a  onclick="showPolicy()"><br>Privacy Policy</a></section><section class="Tooltipicon popAboutus"><a href="aboutus.html"><br>About Us</a></section></section><section class="dwnssArrrow"></section></section></section><section class="sendTooltip"><section class="moreTooltipinner"><section class="moreTooltipiconcover"><section class="sendtipicon popSMS" ><a href="sms:?body=New York General Contact %0A Email:marybeth.scalici@nbcuni.com %0A  Phone: 1.212.664.2013"><br>SMS</a></section><section class="sendtipicon popMail" onclick="takeScreenShot(mailSubject,mailBody,true,toEMail);"><a ><br>Email</a></section></section><section class="dwnssArrrow"></section></section></section></nav></footer>')
+				 
+		 }
+</script>
+<!--footer section end-->
+</body>
+</html>

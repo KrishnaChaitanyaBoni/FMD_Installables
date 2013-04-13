@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Product" manifest="demo.appcache">
+    <head>
+        <title>NBCU Studio</title>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
+        <meta itemprop="name" content="js/ui/globe_js/jquery.earth-3d.js">
+            <meta itemprop="description" content="Based on the amazing sphere.js plugin of Sam Hasler, jquery.earth3d.js is an open source jquery plugin which will allow you to emulate a 3d earth (or any planet actually) on canvas.">
+                <meta itemprop="image" content="images/globe_imgs/earth1024x1024.jpg">
+                    <script type="text/javascript" src="../js/lib/cordova-1.9.0.js"></script>
+                    
+                    <link rel="stylesheet" href="css/globe_css/demo.css" media="screen">
+                        <script type="text/javascript" src="plugins/sphere/requestanimationframe.polyfill.js"></script>
+                        <script type="text/javascript" src="plugins/jquery/jquery-1.7.2.min.js"></script>
+                        <script type="text/javascript" src="plugins/jquery.ui/jquery-ui.min.js"></script>
+                        <script type="text/javascript" src="js/ui/globe_js/sphere-hacked.js"></script>
+                        <script type="text/javascript" src="js/ui/globe_js/jquery.earth-3d.js"></script>
+                        <script type="text/javascript" src="js/ui/globe_js/demo.js"></script>
+                        <script type="text/javascript" src="js/db/dBHelper.js"></script>
+                        <script type="text/javascript" src="../js/lib/ChildBrowser.js"></script>
+                        <script>
+                                sessionStorage.isGeoLocationAllowed = "NO";
+                            </script>
+                        <script>
+                            $(document).ready(function() {
+                            /*     	alert("Version 1");  */
+                                              localStorage.setItem("CurPage",null);
+                                              var canDetect = "onorientationchange" in window;
+                                              var orientationTimer = 0;
+                                              
+                                              var ROTATION_CLASSES = {
+                                              "0": "none",
+                                              "90": "right",
+                                              "-90": "left",
+                                              "180": "flipped"
+                                              };
+                                              
+                                              $(window).bind(canDetect ? "orientationchange" : "resize", function(evt) {
+                                                             clearTimeout(orientationTimer);
+                                                             orientationTimer = setTimeout(function() {
+                                                                                           $("#event-type").html(evt.type);
+                                                                                           $("#window-orientation").html(window.orientation);
+                                                                                           $("#window-width").html(window.innerWidth);
+                                                                                           $("#window-height").html(window.innerHeight);
+                                                                                           
+                                                                                           // given we can only really rely on width and height at this stage,
+                                                                                           // calculate the orientation based on aspect ratio
+                                                                                           var aspectRatio = 1;
+                                                                                           if (window.innerHeight !== 0) {
+                                                                                           aspectRatio = window.innerWidth / window.innerHeight;
+                                                                                           } // if
+                                                                                           
+                                                                                           // determine the orientation based on aspect ratio
+                                                                                           var orientation = aspectRatio <= 1 ? "portrait" : "landscape";
+                                                                                           
+                                                                                           // if the event type is an orientation change event, we can rely on
+                                                                                           // the orientation angle
+                                                                                           var rotationText = null;
+                                                                                           if (evt.type == "orientationchange") {
+                                                                                           rotationText = ROTATION_CLASSES[window.orientation.toString()];
+                                                                                           } // if
+                                                                                           
+                                                                                           $(window).trigger("reorient", [orientation, rotationText]);
+                                                                                           }, 500);
+                                                             });
+                                              
+                                              $(window).bind("reorient", function(evt, orientation, rotation) {
+                                                             // display the details we have determine from the display
+                                                             $("#orientation").html(orientation);
+                                                             $("#rotation-class").html(rotation);
+                                                             });
+                                              });
+                            </script>
+                        <script>
+                            $(document).ready(function(){
+                                              
+                                              
+                                              var hSelect = $("#sphere").height();
+                                              var aSelect = hSelect/2;
+                                              var wSelect = $(window).height() / 2;
+                                              var windowwidth = $(window).width();
+                                              var tSelect = wSelect - aSelect;
+                                              var selectL = tSelect + hSelect + 10;
+                                              var selectN = selectL + 25;
+                                              var heads = tSelect - 120;
+                                              var heads2 = tSelect - 90;
+                                              $("#sphere, #flights, #glow-shadows, #locations, #drag").css("top", tSelect);
+                                              $(".selectLocation").css("top", selectL);
+                                              $(".indexNav").css("top", selectN);
+                                              if( windowwidth > 595){$("header .headerinner").css("top", heads);}
+                                              else
+                                              {$("header .headerinner").css("top", heads2);}
+                                              $(window).bind('orientationchange', function () {
+                                                             
+                                                             setTimeout(function () {
+                                                                        var hSelect = $("#sphere").height();
+                                                                        var aSelect = hSelect/2;
+                                                                        var wSelect = $(window).height() / 2;
+                                                                        var windowwidth = $(window).width();
+                                                                        var ipadheight = $(window).height();
+                                                                        
+                                                                        if(ipadheight > 595)
+                                                                        {
+                                                                        
+                                                                        var hSelect = $("#sphere").height();
+                                                                        var aSelect = hSelect/2;
+                                                                        var wSelect = $(window).height() / 2;
+                                                                        var tSelect = wSelect - aSelect;
+                                                                        var selectL = tSelect + hSelect + 10;
+                                                                        var selectN = selectL + 25;
+                                                                        var heads = tSelect - 120;
+                                                                        var heads2 = tSelect - 90;
+                                                                        $("#sphere, #flights, #glow-shadows, #locations, #drag").css("top", tSelect);
+                                                                        $(".selectLocation").css("top", selectL);
+                                                                        $(".indexNav").css("top", selectN);
+                                                                        if( windowwidth > 595){$("header .headerinner").css("top", heads);}
+                                                                        else
+                                                                        {$("header .headerinner").css("top", heads2);}
+                                                                        
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                        
+                                                                        var hSelect = $("#sphere").height();
+                                                                        var aSelect = hSelect/2;
+                                                                        var wSelect = $(window).height() / 2;
+                                                                        var tSelect = wSelect - aSelect;
+                                                                        var selectL = tSelect + hSelect + 10;
+                                                                        var selectN = selectL + 25;
+                                                                        var heads = tSelect - 120;
+                                                                        var heads2 = tSelect - 90;
+                                                                        $("#sphere, #flights, #glow-shadows, #locations, #drag").css("top", tSelect);
+                                                                        $(".selectLocation").css("top", selectL);
+                                                                        $(".indexNav").css("top", selectN);
+                                                                        if( windowwidth > 595){$("header .headerinner").css("top", heads);}
+                                                                        else
+                                                                        {$("header .headerinner").css("top", heads2);}
+                                                                        
+                                                                        }
+                                                                        }, 400);
+                                                             });
+                                              
+                                              
+                                              
+                                              });
+                            </script>
+                        </head>
+    <body onload="initDB();">
+        <img src="images/globe_imgs/earth1024x1024.jpg" style="display:none;">
+            <header>
+                <div class="headerinner">
+                </div>
+            </header>
+            
+            <div class="selectLocation">Please select a location</div>
+            <div id="showoff">
+                <canvas id="sphere" width="400" height="400"></canvas>
+                <canvas id="flights" width="400" height="400"></canvas>
+                <div id="locations"></div>
+            </div>
+            <div class="indexNav">
+                <div class="nav">
+                    <div  class="btn1"><a href="html/universalLanding.html">Universal Studios</a></div>
+                    <div class="btn2"><a href="html/chicagoLanding.html">Chicago</a></div>
+                    <div  class="btn3"><a href="html/newyorkLanding.html">New York</a></div>
+                </div>
+            </div>
+    </body>
+</html>
