@@ -1,0 +1,597 @@
+/*-----------Production Page styles-----------*/
+#optionValue1 li:nth-child(1) .div-thumb a, #optionValue1 li:nth-child(1) .tmIcon{background:url(../../images/backlot/European_Spartacus/Backlot_CourtofMiracles.jpg) no-repeat; background-size:100% 100%}
+#optionValue1 li:nth-child(3) .div-thumb a, #optionValue1 li:nth-child(3) .tmIcon{background:url(../../images/backlot/European_Spartacus/Backlot_EuropeanSt.jpg) no-repeat; background-size:100% 100%}
+#optionValue1 li:nth-child(5) .div-thumb a, #optionValue1 li:nth-child(5) .tmIcon{background:url(../../images/backlot/European_Spartacus/Backlot_MediterraneanSquare.jpg) no-repeat; background-size:100% 100%}
+#optionValue1 li:nth-child(7) .div-thumb a, #optionValue1 li:nth-child(7) .tmIcon{background:url(../../images/backlot/European_Spartacus/Backlot_SpartacusSquare.jpg) no-repeat; background-size:100% 100%}
+
+#optionValue2 li:nth-child(1) .div-thumb a, #optionValue2 li:nth-child(1) .tmIcon{background:url(../../images/backlot/NewYorkArea/Backlot_WallStreet.jpg) no-repeat; background-size:100% 100%}
+#optionValue2 li:nth-child(3) .div-thumb a, #optionValue2 li:nth-child(3) .tmIcon{background:url(../../images/backlot/NewYorkArea/Backlot_WestVillage.jpg) no-repeat; background-size:100% 100%}
+#optionValue2 li:nth-child(5) .div-thumb a, #optionValue2 li:nth-child(5) .tmIcon{background:url(../../images/backlot/NewYorkArea/Backlot_ModernNYSt.jpg) no-repeat; background-size:100% 100%}
+#optionValue2 li:nth-child(7) .div-thumb a, #optionValue2 li:nth-child(7) .tmIcon{background:url(../../images/backlot/NewYorkArea/Backlot_LondonSquare.jpg) no-repeat; background-size:100% 100%}
+#optionValue2 li:nth-child(9) .div-thumb a, #optionValue2 li:nth-child(9) .tmIcon{background:url(../../images/backlot/NewYorkArea/Backlot_Brownstone.jpg) no-repeat; background-size:100% 100%}
+#optionValue2 li:nth-child(11) .div-thumb a, #optionValue2 li:nth-child(11) .tmIcon{background:url(../../images/backlot/NewYorkArea/Backlot_NewYorkStreet.jpg) no-repeat; background-size:100% 100%}
+#optionValue2 li:nth-child(13) .div-thumb a, #optionValue2 li:nth-child(13) .tmIcon{background:url(../../images/backlot/NewYorkArea/Backlot_CourthouseSquare.jpg) no-repeat; background-size:100% 100%}
+#optionValue2 li:nth-child(15) .div-thumb a, #optionValue2 li:nth-child(15) .tmIcon{background:url(../../images/backlot/NewYorkArea/Backlot_Theaters.jpg) no-repeat; background-size:100% 100%}
+#optionValue2 li:nth-child(17) .div-thumb a, #optionValue2 li:nth-child(17) .tmIcon{background:url(../../images/backlot/NewYorkArea/Backlot_NewyorkZoneMap.jpg) no-repeat; background-size:100% 100%}
+
+#optionValue3 li:nth-child(1) .div-thumb a, #optionValue3 li:nth-child(1) .tmIcon{background:url(../../images/backlot/oldWest/Backlot_DenverStreet.jpg) no-repeat; background-size:100% 100%}
+#optionValue3 li:nth-child(3) .div-thumb a, #optionValue3 li:nth-child(3) .tmIcon{background:url(../../images/backlot/oldWest/Backlot_Mexicanst.jpg) no-repeat; background-size:100% 100%}
+#optionValue3 li:nth-child(5) .div-thumb a, #optionValue3 li:nth-child(5) .tmIcon{background:url(../../images/backlot/oldWest/Backlot_WesternSt.jpg) no-repeat; background-size:100% 100%}
+
+#optionValue4 li:nth-child(1) .div-thumb a, #optionValue4 li:nth-child(1) .tmIcon{background:url(../../images/backlot/parksLakes/Backlot_PsychoFlats.jpg) no-repeat; background-size:100% 100%}
+#optionValue4 li:nth-child(3) .div-thumb a, #optionValue4 li:nth-child(3) .tmIcon{background:url(../../images/backlot/parksLakes/Backlot_ParkLake.jpg) no-repeat; background-size:100% 100%}
+#optionValue4 li:nth-child(5) .div-thumb a, #optionValue4 li:nth-child(5) .tmIcon{background:url(../../images/backlot/parksLakes/Backlot_JawsLake.jpg) no-repeat; background-size:100% 100%}
+#optionValue4 li:nth-child(7) .div-thumb a, #optionValue4 li:nth-child(7) .tmIcon{background:url(../../images/backlot/parksLakes/Backlot_CentralPark.jpg) no-repeat; background-size:100% 100%}
+#optionValue4 li:nth-child(9) .div-thumb a, #optionValue4 li:nth-child(9) .tmIcon{background:url(../../images/backlot/parksLakes/Backlot_FreewayPark.jpg) no-repeat; background-size:100% 100%}
+#optionValue4 li:nth-child(11) .div-thumb a, #optionValue4 li:nth-child(11) .tmIcon{background:url(../../images/backlot/parksLakes/Backlot_HollywoodTerrace.jpg) no-repeat; background-size:100% 100%}
+#optionValue4 li:nth-child(13) .div-thumb a, #optionValue4 li:nth-child(13) .tmIcon{background:url(../../images/backlot/parksLakes/Backlot_NewFalls.jpg) no-repeat; background-size:100% 100%}
+#optionValue4 li:nth-child(15) .div-thumb a, #optionValue4 li:nth-child(15) .tmIcon{background:url(../../images/backlot/parksLakes/Backlot_Woods.jpg) no-repeat; background-size:100% 100%}
+#optionValue4 li:nth-child(17) .div-thumb a, #optionValue4 li:nth-child(17) .tmIcon{background:url(../../images/backlot/parksLakes/Backlot_FallsLake.jpg) no-repeat; background-size:100% 100%}
+
+#optionValue5 li:nth-child(1) .div-thumb a, #optionValue5 li:nth-child(1) .tmIcon{background:url(../../images/backlot/Practical/Backlot_NewYorkStreet.jpg) no-repeat; background-size:100% 100%}
+#optionValue5 li:nth-child(3) .div-thumb a, #optionValue5 li:nth-child(3) .tmIcon{background:url(../../images/backlot/Practical/Backlot_StudioRestaurant.jpg) no-repeat; background-size:100% 100%}
+#optionValue5 li:nth-child(5) .div-thumb a, #optionValue5 li:nth-child(5) .tmIcon{background:url(../../images/backlot/Practical/Backlot_office3.jpg) no-repeat; background-size:100% 100%}
+
+
+#optionValue6 li:nth-child(1) .div-thumb a, #optionValue6 li:nth-child(1) .tmIcon{background:url(../../images/backlot/Residential/Backlot_JawsLake.jpg) no-repeat; background-size:100% 100%}
+#optionValue6 li:nth-child(3) .div-thumb a, #optionValue6 li:nth-child(3) .tmIcon{background:url(../../images/backlot/Residential/Backlot_WestVillage.jpg) no-repeat; background-size:100% 100%}
+#optionValue6 li:nth-child(5) .div-thumb a, #optionValue6 li:nth-child(5) .tmIcon{background:url(../../images/backlot/Residential/Backlot_Brownstone.jpg) no-repeat; background-size:100% 100%}
+#optionValue6 li:nth-child(7) .div-thumb a, #optionValue6 li:nth-child(7) .tmIcon{background:url(../../images/backlot/Residential/Backlot_Cabin.jpg) no-repeat; background-size:100% 100%}
+#optionValue6 li:nth-child(9) .div-thumb a, #optionValue6 li:nth-child(9) .tmIcon{background:url(../../images/backlot/Residential/Backlot_ChickenRanch.jpg) no-repeat; background-size:100% 100%}
+#optionValue6 li:nth-child(11) .div-thumb a, #optionValue6 li:nth-child(11) .tmIcon{background:url(../../images/backlot/Residential/Backlot_ColonialStreet.jpg) no-repeat; background-size:100% 100%}
+#optionValue6 li:nth-child(13) .div-thumb a, #optionValue6 li:nth-child(13) .tmIcon{background:url(../../images/backlot/Residential/Backlot_ElmStreet.jpg) no-repeat; background-size:100% 100%}
+
+#optionValue7 li:nth-child(1) .div-thumb a, #optionValue7 li:nth-child(1) .tmIcon{background:url(../../images/backlot/speciality/Backlot_JawsLake.jpg) no-repeat; background-size:100% 100%}
+#optionValue7 li:nth-child(3) .div-thumb a, #optionValue7 li:nth-child(3) .tmIcon{background:url(../../images/backlot/speciality/Backlot_Commissary.jpg) no-repeat; background-size:100% 100%}
+#optionValue7 li:nth-child(5) .div-thumb a, #optionValue7 li:nth-child(5) .tmIcon{background:url(../../images/backlot/speciality/Backlot_747CrashSite.jpg) no-repeat; background-size:100% 100%}
+#optionValue7 li:nth-child(7) .div-thumb a, #optionValue7 li:nth-child(7) .tmIcon{background:url(../../images/backlot/speciality/Backlot_BatesMotel.jpg) no-repeat; background-size:100% 100%}
+#optionValue7 li:nth-child(9) .div-thumb a, #optionValue7 li:nth-child(9) .tmIcon{background:url(../../images/backlot/speciality/Backlot_Bridge.jpg) no-repeat; background-size:100% 100%}
+#optionValue7 li:nth-child(11) .div-thumb a, #optionValue7 li:nth-child(11) .tmIcon{background:url(../../images/backlot/parksLakes/Backlot_HollywoodTerrace.jpg) no-repeat; background-size:100% 100%}
+#optionValue7 li:nth-child(13) .div-thumb a, #optionValue7 li:nth-child(13) .tmIcon{background:url(../../images/backlot/speciality/Backlot_PsychoHouse.jpg) no-repeat; background-size:100% 100%}
+#optionValue7 li:nth-child(15) .div-thumb a, #optionValue7 li:nth-child(15) .tmIcon{background:url(../../images/backlot/NewYorkArea/Backlot_Theaters.jpg) no-repeat; background-size:100% 100%}
+#optionValue7 li:nth-child(17) .div-thumb a, #optionValue7 li:nth-child(17) .tmIcon{background:url(../../images/backlot/speciality/Backlot_UnderwaterTank.jpg) no-repeat; background-size:100% 100%}
+#optionValue7 li:nth-child(19) .div-thumb a, #optionValue7 li:nth-child(19) .tmIcon{background:url(../../images/backlot/speciality/Backlot_TrainStation.jpg) no-repeat; background-size:100% 100%}
+#optionValue7 li:nth-child(21) .div-thumb a, #optionValue7 li:nth-child(21) .tmIcon{background:url(../../images/backlot/speciality/rooftop.jpg) no-repeat; background-size:100% 100%}
+
+
+.backlotListcover{display:none}
+
+.backlotContact .cnt{font-weight:bold;}
+.backlotContact .mail a{text-decoration:none;cursor:pointer; color:#0085d2;}
+.backlotContact .call a{text-decoration:none;cursor:pointer; color:#000;}
+.RoutemappopHide{display:none;}
+
+@media screen and (min-width: 1024px),screen and (min-width: 800px)and (max-width: 1023px), screen and (min-width: 600px)and (max-width: 799px)
+{ 
+    
+    .mapSliderinner{height:400px;}
+    
+    /*map style*/
+    #getRouteText{
+		clear: both; background:#738a2a; font-size: 12px; width: 450px; padding: 5px; height: 33px; margin: 10px auto 5px; border-radius:6px;
+	}
+    .dirWidth{width:400px; height:500px;
+    }
+    
+    .helpWidth{width:250px; height:250px;}
+    
+	#getRouteText .fromtext{
+		background: none repeat scroll 0% 0% rgb(75, 75, 75); color: rgb(255, 255, 255); float: left; margin: 0pt 0pt 1px; width: 10%; border-radius: 6px 0pt 0pt 6px; padding: 4px 0pt 0pt; height: 28px;
+	}
+	#getRouteText .fromtextbox{
+		background: none repeat scroll 0% 0% rgb(154, 154, 154); float: left; height: 32px; width: 29%; margin: 0pt 1% 1px 0pt; border-radius: 0pt 6px 6px 0pt;
+	}
+	#getRouteText .totext{background: none repeat scroll 0% 0% rgb(75, 75, 75); color: rgb(255, 255, 255); float: left; margin: 0pt 0pt 1px; width: 10%; height: 28px; padding: 4px 0pt 0pt; border-radius: 6px 0pt 0pt 6px;}
+	#getRouteText .totextbox{
+		background: none repeat scroll 0% 0% rgb(154, 154, 154); float: left; height: 32px; margin: 0pt 0pt 1px; width: 30%; border-radius: 0pt 6px 6px 0pt;"><div style="padding:5px;
+	}
+	#getRouteText .textsubmit{
+		float: left;width: 20%;
+	}
+	.mapRouteContainer{
+        bottom: 0;
+        left:0;
+        right:0;
+        height: auto;
+        overflow: auto;
+        position: absolute;
+        top: 60px;
+        width:auto;}
+    
+	.mapLocation{position:absolute;right:3px;top:4px;z-index:11;height:24px; border-radius:6px;}
+    .mapDirection{position:absolute;right:111px;top:0;z-index:12;height:24px; border-radius:6px;}
+    .mapSelect{position:absolute;right:12px;top:0;z-index:12;height:24px; border-radius:6px;}
+	.mapRefresh{position:absolute;right:165px;top:0;z-index:12;height:24px; border-radius:6px;}
+	.routeslides{position:absolute;right:111px!important;top:0;z-index:12;height:24px;border-radius:6px;}
+    .mapAdj{position:absolute;right:10px!important;top:4px;z-index:11;height:24px; border-radius:6px;}
+    
+    
+	.mapDirection a,.mapSelect a, .mapRefresh a{float: left;height: 30px;padding: 4px 0 0; width: 40px;}
+	.mapLocation a{float: left;height: 30px;width: 40px;}
+    
+	/* box-shadow:0 1px 2px #000000;*/
+    .mapHelp{position:absolute;right:64px;top:4px;z-index:11;height:24px; border-radius:6px;}
+    .map-selectouter{margin:0 0 0 10px!important;max-width:185px!important;position:absolute;left:65px;top:6px;z-index:10;}
+    .map-selectouter .styled-select select{max-width:202px;}
+    .mapListBar{margin:0 15px 0 15px!important;position:relative;border-radius:6px;}
+    .mapContainer{
+        bottom: 0; 
+        left:0; 
+        right:0;
+        height: auto;
+        overflow: auto;
+        position: absolute;
+        top: 0px;
+        width:auto;}
+    .mapWrapperInner{height:100%;width:auto;position:relative;}
+    .mapList{padding:10px 0 0 0;position:relative;}
+    /*map style end*/
+    
+    
+    .backlotContact .callIcon{color:#000;float:right;margin:0 2px 0 0}
+    .backlotContact .mailIcon{float:right;margin:4px 3px 0 0}
+    .backlotContact{width:495px;box-shadow: 1px 1px #819A34; border-radius:6px;	margin:15px auto 0 auto;}
+    .backlotContact .backlotCntinner{width:495px;height:20px;border-radius:6px;padding:6px 0 6px 0;}
+    .backlotContact .call{color:#000;font-size:12px;float:right; margin:4px 10px 0 0}
+    .backlotContact .mail{font-size:12px;float:right;margin:3px 8px 0 0}
+    
+    .backlotListcover .ipn{display:none;}
+    .backlotListcover li .div-thumb{position:relative;}	
+    .backlotListcover li .div-thumb a{
+        width:100%;
+        position:absolute;
+    }
+    .backlotListcover ul{ border:none;	border-radius:none;list-style-type:none;margin:10px 15px 15px 15px;padding:0px;}
+    .backlotListcover ul li .proCnt_header{font-size:14px;
+        margin:0px;
+        padding:0 60px 0 10px;
+        height:39px;
+        border-bottom:2px solid #b9b8b5;
+        font-weight:bold;
+        background: #ffffff; /* Old browsers */
+        background: -moz-linear-gradient(top,  #ffffff 0%, #ffffff 18%, #fdfef9 29%, #e6ecd0 84%, #e3ebc6 92%, #e2e9c7 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(18%,#ffffff), color-stop(29%,#fdfef9), color-stop(84%,#e6ecd0), color-stop(92%,#e3ebc6), color-stop(100%,#e2e9c7)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#ffffff 18%,#fdfef9 29%,#e6ecd0 84%,#e3ebc6 92%,#e2e9c7 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#ffffff 18%,#fdfef9 29%,#e6ecd0 84%,#e3ebc6 92%,#e2e9c7 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#ffffff 18%,#fdfef9 29%,#e6ecd0 84%,#e3ebc6 92%,#e2e9c7 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#ffffff 18%,#fdfef9 29%,#e6ecd0 84%,#e3ebc6 92%,#e2e9c7 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2e9c7',GradientType=0 ); /* IE6-9 */
+    }
+    
+    .backlotListcover .proCntGrnt{
+        background: #ffffff; /* Old browsers */
+        background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 74%, #f9f9f9 80%, #f2f2f2 83%, #efefef 86%, #ebebeb 88%, #dbdbdb 99%, #ececec 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(74%,#ffffff), color-stop(80%,#f9f9f9), color-stop(83%,#f2f2f2), color-stop(86%,#efefef), color-stop(88%,#ebebeb), color-stop(99%,#dbdbdb), color-stop(100%,#ececec)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 74%,#f9f9f9 80%,#f2f2f2 83%,#efefef 86%,#ebebeb 88%,#dbdbdb 99%,#ececec 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #ffffff 0%,#ffffff 74%,#f9f9f9 80%,#f2f2f2 83%,#efefef 86%,#ebebeb 88%,#dbdbdb 99%,#ececec 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 74%,#f9f9f9 80%,#f2f2f2 83%,#efefef 86%,#ebebeb 88%,#dbdbdb 99%,#ececec 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #ffffff 0%,#ffffff 74%,#f9f9f9 80%,#f2f2f2 83%,#efefef 86%,#ebebeb 88%,#dbdbdb 99%,#ececec 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ececec',GradientType=0 ); /* IE6-9 */
+    }
+    .selectlistBar{ 
+        height:42px;
+        padding: 6px 0 0;
+        margin:15px;
+        box-shadow:0 0px 3px #515B34;
+        background: #ffffff; /* Old browsers */
+        background: -moz-linear-gradient(top,  #ffffff 0%, #f5f7ea 28%, #e3eac9 61%, #e1e8c6 67%, #dfe7c0 70%, #d5e1b1 91%, #d3dfad 93%, #d1ddad 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(28%,#f5f7ea), color-stop(61%,#e3eac9), color-stop(67%,#e1e8c6), color-stop(70%,#dfe7c0), color-stop(91%,#d5e1b1), color-stop(93%,#d3dfad), color-stop(100%,#d1ddad)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#f5f7ea 28%,#e3eac9 61%,#e1e8c6 67%,#dfe7c0 70%,#d5e1b1 91%,#d3dfad 93%,#d1ddad 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#f5f7ea 28%,#e3eac9 61%,#e1e8c6 67%,#dfe7c0 70%,#d5e1b1 91%,#d3dfad 93%,#d1ddad 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#f5f7ea 28%,#e3eac9 61%,#e1e8c6 67%,#dfe7c0 70%,#d5e1b1 91%,#d3dfad 93%,#d1ddad 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#f5f7ea 28%,#e3eac9 61%,#e1e8c6 67%,#dfe7c0 70%,#d5e1b1 91%,#d3dfad 93%,#d1ddad 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d1ddad',GradientType=0 ); /* IE6-9 */
+    }
+    
+    .backlotListcover ul li .locationBtn a
+    {
+        right:10px;
+        top:8px;
+        background:url(../../images/backlot/backlot_locIcon.png) no-repeat;
+    }
+    .backlotListcover ul li .locationBtn a{
+        font-size:12px;
+        line-height:20px;	
+        height:25px;
+        width:25px;
+        position:absolute;
+        
+	}
+    .backlotListcover ul li{background:#FFF;
+        min-height:50px;
+        border-bottom:1px solid #FFFFFF;
+        position:relative; 
+        border-radius:none;
+        /*-khtml-border-radius: 6px;*/
+        float:left; 
+        margin:0 0 15px 0;
+        box-shadow:0 2px 2px #435311;
+        
+    }
+    
+    .backlotListcover ul li .proCnt_header p{
+        display:table-cell; 
+        vertical-align:middle;
+        height:39px;
+    }
+    .backlotListcover ul li .proCnt_header p span{
+        color:#616161;
+        font-size:12px;
+    }
+    .backlotListcover ul li:first-child{border-radius:none;}
+    .backlotListcover ul li:last-child{	border-radius:none;}
+    .backlotListcover ul li section{padding:0px;}
+    .backlotListcover ul li span:last-child{color:#0085d2;}
+    
+    
+    .backlotpop img{height:335px;width:500px;}
+    
+    .styled-selectouter{
+        border:1px solid #c4cbb3;
+    }
+    .countryLabel{position:absolute;width:auto; height:auto;border-radius:6px;top:10px;left:50px; z-index:12;}
+    
+	.backlotDiv1{display:block;}
+.backlotDiv2,.backlotDiv3,.backlotDiv4,.backlotDiv5,.backlotDiv6,.backlotDiv7{display:none;}
+.backlotDiv1, .backlotDiv2,.backlotDiv3,.backlotDiv4,.backlotDiv5,.backlotDiv6,.backlotDiv7{text-shadow:0px 1px 3px #fff; font-weight:bold;color:#000; margin:10px 0 0 15px;}
+}
+
+
+@media screen and (min-width: 1024px)
+{
+	/* Directory Page contents */	
+	
+    
+    .backlotListcover ul li{
+        width:24.25%;
+        height:242px;
+    }
+    .backlotListcover li .div-thumb a{height:202px;}
+    .backlotListcover ul .listgap{ display:block; width:1%; background:none;border:none;box-shadow:none;}
+    .backlotListcover ul li:nth-child(8n+0){display:none;}
+}
+
+@media screen and (min-width: 800px)and (max-width: 1023px)
+{
+    
+    .backlotListcover ul li{
+        width:32.33%;
+        height:242px;
+    }
+    .backlotListcover li .div-thumb a{height:202px;}
+    .backlotListcover ul .listgap{ display:block; width:1.5%; background:none;border:none;box-shadow:none;}
+    .backlotListcover ul li:nth-child(6n+0){display:none;} 
+}
+
+@media screen and (min-width: 600px)and (max-width: 799px)
+{
+    
+    .backlotListcover ul li{
+        width:32.33%;
+        height:195px;
+    }
+    .backlotListcover li .div-thumb a{height:155px;}
+    .backlotListcover ul .listgap{ display:block; width:1.5%; background:none;border:none;box-shadow:none;}
+    .backlotListcover ul li:nth-child(6n+0){display:none;}
+    
+}
+
+@media screen and (min-width: 100px) and (max-width: 599px)
+{
+        
+	.mapRefresh{position:absolute;left:12px;top:4px;z-index:12;height:24px;border-radius:6px;}
+	
+	.mapSliderinner{height:200px;}
+	/*map style*/
+	#getRouteText{
+		clear: both; background:#738a2a; font-size: 12px; width:298px; padding: 5px; height: 60px; margin: 10px auto 5px; border-radius:6px;
+	}
+    .dirWidth{width:250px; height:400px;
+    }
+    
+    .helpWidth{width:250px; height:250px;}
+    
+	#getRouteText .fromtext{
+		background: none repeat scroll 0% 0% rgb(75, 75, 75); color: rgb(255, 255, 255); float: left; margin: 0pt 0pt 1px; width: 18%; border-radius: 6px 0pt 0pt 6px; padding: 4px 0pt 0pt; height: 28px;
+	}
+	#getRouteText .fromtextbox{
+		background: none repeat scroll 0% 0% rgb(154, 154, 154); float: left; height: 32px; width: 31%; margin: 0pt 1% 1px 0pt; border-radius: 0pt 6px 6px 0pt;
+	}
+	#getRouteText .totext{background: none repeat scroll 0% 0% rgb(75, 75, 75); color: rgb(255, 255, 255); float: left; margin: 0pt 0pt 1px; width: 18%; height: 28px; padding: 4px 0pt 0pt; border-radius: 6px 0pt 0pt 6px;}
+	#getRouteText .totextbox{
+		background: none repeat scroll 0% 0% rgb(154, 154, 154); float: left; height: 32px; margin: 0pt 0pt 1px; width: 32%; border-radius: 0pt 6px 6px 0pt;"><div style="padding:5px;
+	}
+	#getRouteText .textsubmit{
+		float: left;width: 100%;
+	}
+	.mapRouteContainer{
+        bottom: 0;
+        left:0;
+        right:0;
+        height: auto;
+        overflow: auto;
+        position: absolute;
+        top: 90px;
+        width:auto;}
+    
+    .mapLocation{position:absolute;right:10px;top:4px;z-index:11;height:24px; border-radius:6px;}
+    .mapDirection{position:absolute;left:52px;top:0;z-index:12;height:24px; border-radius:6px;}
+    .mapSelect{position:absolute;left:6px;top:0;z-index:12;height:24px; border-radius:6px;}
+	.mapRefresh{position:absolute;left:6px;top:0;z-index:12;height:24px;border-radius:6px;}
+    
+    
+    .mapDirection a, .mapSelect a, .mapRefresh a, .mapHelp a{float: left;
+        height: 30px;
+        padding: 4px 0 0;
+        width: 36px;}
+	.mapLocation a{height: 30px;
+        width: 36px;}
+    
+	
+    .mapHelp{position:absolute;right:58px;top:4px;z-index:11;height:24px; border-radius:6px;}
+    .map-selectouter{margin:0 0 0 10px!important;max-width:185px!important;position:absolute;right:5px;top:54px;z-index:10;}
+    .map-selectouter .styled-select select{max-width:202px;}
+    .mapListBar{position:relative;
+        height:42px;
+        padding: 7px 0 0!important;
+        
+        background: #ffffff; /* Old browsers */
+        background: -moz-linear-gradient(top,  #ffffff 0%, #f5f7ea 28%, #e3eac9 61%, #e1e8c6 67%, #dfe7c0 70%, #d5e1b1 91%, #d3dfad 93%, #d1ddad 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(28%,#f5f7ea), color-stop(61%,#e3eac9), color-stop(67%,#e1e8c6), color-stop(70%,#dfe7c0), color-stop(91%,#d5e1b1), color-stop(93%,#d3dfad), color-stop(100%,#d1ddad)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#f5f7ea 28%,#e3eac9 61%,#e1e8c6 67%,#dfe7c0 70%,#d5e1b1 91%,#d3dfad 93%,#d1ddad 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#f5f7ea 28%,#e3eac9 61%,#e1e8c6 67%,#dfe7c0 70%,#d5e1b1 91%,#d3dfad 93%,#d1ddad 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#f5f7ea 28%,#e3eac9 61%,#e1e8c6 67%,#dfe7c0 70%,#d5e1b1 91%,#d3dfad 93%,#d1ddad 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ffffff 0%,#f5f7ea 28%,#e3eac9 61%,#e1e8c6 67%,#dfe7c0 70%,#d5e1b1 91%,#d3dfad 93%,#d1ddad 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d1ddad',GradientType=0 ); /* IE6-9 */
+    }
+    .mapContainer{
+        bottom: 0; 
+        left:0; 
+        right:0;
+        height: auto;
+        overflow: auto;
+        position: absolute;
+        top: 0px;
+        width:auto;
+        margin:0px;
+        /*margin:0 15px 15px 15px;*/
+        /*border-radius:6px;*/
+        background:#030;}
+    .mapWrapperInner{height:100%;width:auto;position:relative;}
+    .mapList{padding:10px 0 0 0;position:relative;}
+    
+    /*map style end*/
+	.backlotListcover ul li .proCnt_header{
+        
+        padding:0 34px;
+	}
+    .backlotListcover ul li .proCnt_header p span{
+        color:#616161;
+        font-size:12px;
+    }
+    
+    
+    .backlotListcover ul{ border:1px solid #FFFFFF;	border-radius:6px; list-style-type:none;margin:15px;padding:0px; }
+    .backlotListcover ul li{background:#FFF;min-height:40px;border-bottom:1px solid #eae9e9;position:relative;}
+    .backlotListcover ul li p{font-size:14px;margin:0px;padding:0px;font-weight:bold;}
+    .backlotListcover ul li span{font-size:12px;margin:0px;padding:0px;line-height:19px;}
+    .backlotListcover ul li section{padding:15px 0 10px 15px;}
+    .backlotListcover ul li span:last-child{color:#0085d2;}
+    .backlotListcover ul li:first-child{border-radius:6px 6px 0 0;}
+    .backlotListcover ul li:last-child{	border-radius:0 0 6px 6px;border-bottom:none;}
+    .backlotListcover ul .listgap{ display:none;}
+    .backlotListcover ul li .addBtn a
+    {
+        right:36px;
+        top:10px;
+        background:url(../../images/universal/production_add.png) no-repeat;
+    }
+    .backlotListcover ul li .locationBtn a
+    {
+        right:10px;
+        top:7px;
+		background:url(../../images/backlot/backlot_locIcon.png) no-repeat;
+        
+    }
+    .backlotListcover ul li .locationBtn a{
+        font-size:12px;
+        line-height:20px;	
+        height:25px;
+        width:25px;
+        position:absolute;
+        
+	}
+    
+	
+    .backlotListcover .proCntGrnt{
+        background: #fefefe; /* Old browsers */
+        background: -moz-linear-gradient(top,  #fefefe 0%, #ffffff 5%, #f9f9f9 50%, #f0f0f0 87%, #f0f0f0 95%, #ececec 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(5%,#ffffff), color-stop(50%,#f9f9f9), color-stop(87%,#f0f0f0), color-stop(95%,#f0f0f0), color-stop(100%,#ececec)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #fefefe 0%,#ffffff 5%,#f9f9f9 50%,#f0f0f0 87%,#f0f0f0 95%,#ececec 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #fefefe 0%,#ffffff 5%,#f9f9f9 50%,#f0f0f0 87%,#f0f0f0 95%,#ececec 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #fefefe 0%,#ffffff 5%,#f9f9f9 50%,#f0f0f0 87%,#f0f0f0 95%,#ececec 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #fefefe 0%,#ffffff 5%,#f9f9f9 50%,#f0f0f0 87%,#f0f0f0 95%,#ececec 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#ececec',GradientType=0 ); /* IE6-9 */
+    }
+    /* Directory Page contents 	*/
+    
+    .backlotListcover li .div-thumb{display:none;}
+    
+    
+    .backlotListcover li .tmIcon{position:absolute;height:30px;
+        border-radius:8px;
+        border:2px solid #fff; box-shadow: 0 0 2px #7e7e7e; width:30px;background:#063;top:3px;left:5px;
+        cursor:pointer;}
+    
+    .backlotContact .mail{display:none;}
+    .backlotContact .call{display:none;}
+    .backlotContact .callIcon{color:#000;float:right;margin:0 10px 0 0}
+    .backlotContact .mailIcon{float:right;margin:4px 6px 0 0}
+    
+    .backlotContact{width:auto;box-shadow: 1px 1px #819A34; border-radius:6px;	margin:10px 15px 0 15px;}
+    .backlotContact .backlotCntinner{width:100%;height:20px;border-radius:6px;padding:6px 0 6px 0;}
+    
+    .selectlistBar{padding:0 15px;margin:15px 0 0 0;}
+    .backlotpop img{height:275px;width:275px;}
+    .styled-selectouter{border:1px solid #C4CBB3;}
+    .backlotListcover .ipn{
+        height: 20px;
+        left: 0;
+        margin: 11px 7px 0 46px;
+        position: absolute;
+        top: 0;
+        width: 60%;
+    }
+    .countryLabel{position:absolute;width:auto; height:auto;border-radius:6px;top:75px;left:10px; z-index:12;}
+    .backlotDiv1{display:block;}
+.backlotDiv2,.backlotDiv3,.backlotDiv4,.backlotDiv5,.backlotDiv6,.backlotDiv7{display:none;}
+.backlotDiv1, .backlotDiv2,.backlotDiv3,.backlotDiv4,.backlotDiv5,.backlotDiv6,.backlotDiv7{text-shadow:0px 1px 3px black; font-weight:bold;color:#fff;}
+}
+
+
+/* common styles */
+
+.styled-select select {
+    background: transparent;
+    width: 310px;
+    padding: 6px 0 0 4px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 33px;
+    -webkit-appearance: none;
+    font-size:14px
+}
+.styled-select {
+	width:100%;
+	height: 33px;
+	overflow: hidden;
+	background:url(../../images/common/selectArrow.png) no-repeat right center transparent;
+	border-radius:6px;
+}
+.styled-selectouter{
+    margin:0 auto 0 auto;
+    max-width:290px;
+    border-radius:6px;
+    box-shadow:1px 1px #b9b8b5;
+    background: #fdfdfd; /* Old browsers */
+    background: -moz-linear-gradient(top,  #fdfdfd 0%, #f5f5f5 23%, #d4d4d4 84%, #cfcfcf 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(23%,#f5f5f5), color-stop(84%,#d4d4d4), color-stop(100%,#cfcfcf)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fdfdfd 0%,#f5f5f5 23%,#d4d4d4 84%,#cfcfcf 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fdfdfd 0%,#f5f5f5 23%,#d4d4d4 84%,#cfcfcf 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fdfdfd 0%,#f5f5f5 23%,#d4d4d4 84%,#cfcfcf 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #fdfdfd 0%,#f5f5f5 23%,#d4d4d4 84%,#cfcfcf 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#cfcfcf',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+
+/* popup styles */
+
+.close{background:url(../../images/common/cross.png) no-repeat scroll right 0 transparent;
+    float: right;
+    height: 30px;
+    position: absolute;
+    right: -10px;
+    top: -16px;
+    width: 30px;}
+#mask{display:none;background:#000;position:fixed;left:0;top:0;z-index:10;width:100%;height:100%;opacity:0.6;z-index:10000;}
+#pop{padding:10px;float:left;position:fixed;top:50%;left:50%;z-index:99999;display:none;
+    box-shadow: 0 0 8px #000;
+    border-radius:6px;
+    background: #3a3a3a; /* Old browsers */
+    background: -moz-linear-gradient(top,  #3a3a3a 0%, #353535 2%, #363636 2%, #222222 8%, #1b1b1b 9%, #0f0f0f 12%, #0f0f0f 13%, #060606 15%, #000000 18%, #000000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3a3a3a), color-stop(2%,#353535), color-stop(2%,#363636), color-stop(8%,#222222), color-stop(9%,#1b1b1b), color-stop(12%,#0f0f0f), color-stop(13%,#0f0f0f), color-stop(15%,#060606), color-stop(18%,#000000), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #3a3a3a 0%,#353535 2%,#363636 2%,#222222 8%,#1b1b1b 9%,#0f0f0f 12%,#0f0f0f 13%,#060606 15%,#000000 18%,#000000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #3a3a3a 0%,#353535 2%,#363636 2%,#222222 8%,#1b1b1b 9%,#0f0f0f 12%,#0f0f0f 13%,#060606 15%,#000000 18%,#000000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #3a3a3a 0%,#353535 2%,#363636 2%,#222222 8%,#1b1b1b 9%,#0f0f0f 12%,#0f0f0f 13%,#060606 15%,#000000 18%,#000000 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #3a3a3a 0%,#353535 2%,#363636 2%,#222222 8%,#1b1b1b 9%,#0f0f0f 12%,#0f0f0f 13%,#060606 15%,#000000 18%,#000000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a3a3a', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    
+}
+
+
+.routeCNT{
+	background:#FFF;
+	font-size:14px;
+	color:#1b3600;
+}
+.routeCNT img{
+	width:25px!important; height:25px!important;}
+.helpicons{padding:10px;}
+.helpicons .hlp1{float:left;margin:5px 0 5px 0;height:25px;width:35px;}
+.helpicons .hlp2{float:left;margin:5px 0 8px 0;width:180px;}
+.labelrouteAcover{clear:both;width:100%;border-radius:6px;background:#808080;}
+.labelrouteBcover{clear:both;width:100%;padding:10px 0 0 0;border-radius:6px;position:relative;}
+.labelArrowlist{
+	width:34px;
+	height:30px;
+	border-radius:0 6px 6px 0px;
+	position:absolute;	
+	right:0px;top:10px;
+}
+
+.labelArrowimg
+{
+	background:url(../../images/maps/routearrowRight.png) no-repeat;
+}
+.labelArrowimghover
+{
+	background:url(../../images/maps/routearrowDown.png) no-repeat;
+}
+
+
+.labelDropDown{
+    background: none repeat scroll 0 0 #464646;
+    border: 2px solid #4D4D4D;
+    border-radius: 6px 6px 6px 6px;
+    color: #FFFFFF;
+    font-size: 11px;
+    left: 30px;
+    padding: 6px;
+    position: absolute;
+    top: 40px;
+    width: 135px;
+    z-index: -10;
+}
+.labelDropDownAlpha{
+	z-index: -15;
+	position: absolute;
+}
+.labelrouteA{
+	float:left;background:#212121;height:25px;width:20px;border-radius:6px 0 0 6px;color:#fff;padding:5px 0 0 10px;
+}
+
+.labelrouteB{float:left;background:#212121;height:25px;width:20px;border-radius:6px 0 0 6px;color:#fff;padding:5px 0 0 10px;}
+
+.labelrouteBdesc{
+	float:left;height:25px;color:#fff;max-width:110px;width:110px;line-height:20px;overflow:hidden;border-radius:0px 6px 6px 0;padding:5px 8px 0 6px;word-wrap:break-word; font-size:12px;
+}
+
+.labelrouteAdesc{
+	float:left;height:22px;font-size:12px;color:#fff;min-width:140px;border-radius:0px 6px 6px 0;padding:8px 5px 0 6px;
+}
+.labelroutedescAlpha{
+	background:#000;position:absolute;height:22px;color:#d0d0d0;width:140px;border-radius:0px 6px 6px 0;padding:8px 5px 0 6px; opacity:0.5;z-index:-15;left:30px;
+}
+
+.mapSelectsupport{top:4px!important;}
+
+.dirListHead{position:relative;height:35px;width:100%;background:#ccc; text-align:left;}
+.dirListHeadTitle{position:absolute;top:7px;left:14px; font-weight:bold;}
+.dirListHeadIcon{width:20px; height:30px;position:absolute;right:10px;top:7px;}
+.routelistCntCover{position:absolute;bottom:20px;left:20px;right:20px;top:55px;}
+.mapcategoryLabel{position:absolute;z-index:2;border-radius:6px 0px 0 0; bottom:54px;width:250px; min-height:24px; right:40px; text-align:center; color:#fff; font-weight:bold; font-size:14px;padding:6px 0 0 0; text-shadow:1px 1px 2px #000;}
+.mapcategoryLabelBG{background:#000;opacity:0.4;position:absolute;z-index:1;border-radius:6px 0px 0 0; bottom:54px;min-width:250px; height:37px; right:40px;}
+
+.mapcategoryLabelselect{position:absolute;z-index:2;bottom:54px;width:40px; height:37px; right:0px }
+.mapUpArrowSelect{background:url(../../images/maps/mapUpArrow.png) no-repeat;}
+.mapUpArrowSelectroll{background:url(../../images/maps/mapUpArrowroll.png) no-repeat;}
+.mapDownArrowSelect{background:url(../../images/maps/mapDownArrow.png) no-repeat;}
+.mapUpArrowSelectroll{background:url(../../images/maps/mapDownArrowroll.png) no-repeat;}
+
+.mapDiv1, .mapDiv2, .mapDiv3, .mapDiv4, .mapDiv5, .mapDiv6, .mapDiv7, .mapDiv8, .mapDiv9{display:none;}
+.mapSlider{display:none;}
+

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+<title>Universal Studios</title>
+<link href="../css/common/common.css" rel="stylesheet" type="text/css" />
+<link href="../css/services/landingpages.css" rel="stylesheet" type="text/css" />
+<link href="../css/common/gradients.css" rel="stylesheet" type="text/css" />
+<link href="../css/animate/animate.css" rel="stylesheet" type="text/css" />    
+<script type="text/javascript" src="../js/lib/cordova-1.9.0.js"></script>
+<script type="text/javascript" src="../js/lib/ChildBrowser.js"></script>
+<script type="text/javascript" src="../js/lib/ChildBrowser_android.js"></script>
+<script src="../js/lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery-ui.min.js"></script>
+<script src="../js/service/appUpdate.js"></script>
+<script src="../js/ui/navigation.js"></script>
+<script src="../js/ui/footer.js"></script>
+<script src="../js/db/dBHelper.js"></script>
+<script src="../js/service/directoryServices.js"></script>
+<script src="../js/service/appUpdate.js"></script>
+<script src="../js/lib/SMSComposer.js"></script>
+<script src="../js/lib/EmailComposer.js"></script>
+<script type="text/javascript" src="../js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery.slimscroll.js"></script>
+<script src="../js/lib/Screenshot.js"></script>
+<script>
+     sessionStorage.isGeoLocationAllowed = "NO";
+     localStorage.setItem("isAllowed",0);
+</script>
+    
+<script>$(document).ready(function(){
+              
+                          
+                          $("footer nav .facilityHome a").addClass("facilityHomeHover");
+                          
+                        
+                          $(".backlotBackV2").bind('touchstart', function(){
+                                                   $(".backlotBackV2").addClass("backlotBackV2Roll");setTimeout(function () {$(".backlotBackV2").removeClass("backlotBackV2Roll")},200);
+                                                   });
+                          
+                          $(".backlotHeadericonV2").bind('touchstart', function(){
+                                                         $(".backlotHeadericonV2").addClass("backlotHeadericonV2Roll");setTimeout(function () {$(".backlotHeadericonV2").removeClass("backlotHeadericonV2Roll")},200);
+                                                         });
+                          $(".mailIcon img, .mail a").bind('touchstart', function(){
+                                                  $('.mailIcon img').attr('src','../images/universal/roll/emailicon_universal.png');
+                                                  setTimeout(function () {$('.mailIcon img').attr('src','../images/universal/emailicon_universal.png');},200);
+                                                  });
+                          $(".callIcon img, .call a").bind('touchstart', function(){
+                                                  $('.callIcon img').attr('src','../images/universal/roll/callicon_universal.png');
+                                                  setTimeout(function () {$('.callIcon img').attr('src','../images/universal/callicon_universal.png');},200);
+                                                  });
+                          
+                          });
+    
+    </script>
+</head>
+
+<body onload="setCurrentPageUniversal();parseInfo();initDB();">
+<!--Header section-->
+    <header class="headergradiant">
+        <div class="headerInnerCover">
+<!--            <div id="headerBackHideDiv" class="headerBackHide"></div>-->
+            
+          
+            
+            <span class="headings uniTXTColor">Universal Studios</span>
+            <div class="headerIcon"><a class = "backlotHeadericonV2" ></a></div>
+        </div>
+        <!--Header nav popup-->
+        <div class="homeNav">
+            <div class="homeNavinner">
+                <div class="homeNavArrow"><img src="../images/common/homeNavArrow.png"/></div>
+                <div class="homeNavChicago" >Chicago</div>
+                <div class="homeNavNewyork" >New York</div>
+            </div>
+        </div>
+        <!--Header nav popup end-->
+    </header>
+<!--Header section end-->
+
+<!--wrapper section--->
+<div id="wrapper" class="UniWrapperBG">
+<div class="wrapperinner" id="scrollDiv">
+<div class="universalContact">
+		<div class="generalContactGradient backlotCntinner">
+    		<div class="fLEFT Mleft14 Mtop2 font14 cnt">General Contact Information:</div>
+       	  	<div class="call"><a href ="tel:1.800.892.1979">1.800.892.1979</a></div>	
+          	<div class="callIcon"><a href="tel:1.800.892.1979"><img src="../images/universal/callicon_universal.png" /></a></div>
+            <div class="mail"><a href ="mailto: studio.operations@nbcuni.com">studio.operations@nbcuni.com</a></div>
+			<div class="mailIcon"><a href="mailto: studio.operations@nbcuni.com"><img src="../images/universal/emailicon_universal.png" /></a></div>
+
+    	</div>
+</div>
+
+<!--content cover--->
+<div class="wrapperCNTcover">
+	
+	<div class="UNICarouselcover">
+    <div class="UNICarouselinner">
+		<div class="UNICarousel"></div>
+    </div>
+    </div>
+	
+	<div class="UNIlistcover ">
+		<ul>
+			<li class="iphBgLi ipadBgLi">
+            <div class="listinner">
+            <a href="departmentServicesUniversal.html" onclick='setDepartmentServicename("Working on the Lot","Universal Studios");'  class="cntlink">
+            <div class="uniThumb"> <img src="../images/universal/workingonlot.jpg"/></div>
+            <div class="uniContentCover">
+           
+                <p>Working on the Lot</p>
+                <div class="cnt">Universal Studios has a number of conveniences and amenities to make working on the lot an efficient and enjoyable experience.</div>
+
+            </div>            
+            <span class="rightarrow"><img src="../images/common/icon6Bottom.png" /></span>
+            </a>
+            </div>
+            </li>  
+          
+            <li  class="iphBgLi ipadBgLi">
+             <div class="listinner">
+             <a href="departmentServicesUniversal.html" onclick='setDepartmentServicename("Production Services","Universal Studios");'  class="cntlink">
+            <div class="uniThumb"><img src="../images/universal/productionservices.jpg"/></div>
+            <div class="uniContentCover">
+            
+                <p>Production Services</p>
+                <div class="cnt">Universal offers a variety of production services ranging from set lighting &amp; grip to property and special effects are available for productions on or off lot.
+</div>
+
+            </div>            
+            <span class="rightarrow"><img src="../images/common/icon6Bottom.png" /></span>
+            </a>
+            </div>
+            </li>
+           
+            <li  class="ipadBgLi">
+             <div class="listinner">
+             <a href="soundStagesUniversal.html"  class="cntlink">
+            <div class="uniThumb"><img src="../images/universal/soundstage.jpg"/></div>
+            <div class="uniContentCover">
+                <p>Sound Stages</p>
+                <div class="cnt">Universal has 30 sound stages ranging in size from 6,800 square feet to over 30,000 square feet.
+</div>
+            </div>            
+            <span class="rightarrow"><img src="../images/common/icon6Bottom.png" /></span>
+            </a>
+            </div>
+            </li> 
+        
+            <li >
+             <div class="listinner">
+             <a href="backlot.html"  onclick="getBacklotName()" class="cntlink">
+            <div class="uniThumb"><img src="../images/universal/backlot.jpg" /></div>
+            <div class="uniContentCover">
+                <p>Backlot</p>
+                <div class="cnt">With over 30 locations, the Universal Backlot is among the most extensive in the world and can meet a wide range of settings.
+</div>
+
+            </div>            
+            <span class="rightarrow"><img src="../images/common/icon6Bottom.png" /></span>
+            </a>
+            </div>
+            </li>  
+             <li  class="iphBgLi">
+             <div class="listinner">
+             <a href="departmentServicesUniversal.html" onclick='setDepartmentServicename("Post Production Media Services","Universal Studios")'  class="cntlink">
+            <div class="uniThumb"><img src="../images/universal/postproduction.jpg"/></div>
+            <div class="uniContentCover">
+                <p>Post Production Media 
+Services</p>
+                <div class="cnt">Universal Studios Post Production Media Services offer top talent and a variety of services from sound editorial & design to picture editorial and AVID rentals.
+				</div>
+            </div>            
+            <span class="rightarrow"><img src="../images/common/icon6Bottom.png" /></span>
+            </a>
+            </div>
+            </li> 
+             <li  class="iphBgLi">
+             <div class="listinner">
+             <a href="departmentServicesUniversal.html" onclick='setDepartmentServicename("Universal Digital Services","Universal Studios");'  class="cntlink">
+            <div class="uniThumb"><img src="../images/universal/digitalservices.jpg"/></div>
+            <div class="uniContentCover">
+                <p>Digital Services</p>
+                <div class="cnt">Provides film, tape, color correction, editing, digital / graphical effects, and other film and video related services for internal and external customers.
+				</div>
+
+            </div>            
+            <span class="rightarrow"><img src="../images/common/icon6Bottom.png" /></span>
+            </a>
+            </div>
+            </li>  
+             
+            <li  class="ipadBgLi">
+             <div class="listinner">
+             <a href="departmentServicesUniversal.html" onclick='setDepartmentServicename("Special Events","Universal Studios");'  class="cntlink">
+            <div class="uniThumb"><img src="../images/universal/specialevents.jpg"/></div>
+            <div class="uniContentCover">
+                <p>Special Events</p>
+                <div class="cnt">Universal Studio Special Events Department provides an array of event locations and services creating an exciting and unique environment for any occasion. 
+				</div>
+
+            </div>            
+            <span class="rightarrow"><img src="../images/common/icon6Bottom.png" /></span>
+           </a>
+            </div>
+            </li>  
+              
+             <li  class="ipadBgLi">
+             <div class="listinner">
+                 <a  onclick="showCommissaryMenu()" class="cntlink">
+                     <div class="uniThumb"><img src="../images/universal/commissarymenu.jpg"/></div>
+            <div class="uniContentCover">
+                <p>Commissary Menu</p>
+                <div class="cnt">Cafe provides breakfast & lunch. Room Service delivers to offices & productions. Choose from a list of pre-set menus or simply call for a custom menu.</div>
+            </div>            
+            <span class="rightarrow"><img src="../images/common/icon6Bottom.png" /></span>
+            </a>
+            </div>
+            </li> 
+           
+             <li  class="iphBgLi ipadBgLi">
+             <div class="listinner">
+             <a  onclick="showVirtualTour()"  class="cntlink">
+            <div class="uniThumb"><img src="../images/universal/virtualtour.jpg"/></div>
+            <div class="uniContentCover">
+                <p>Virtual Tour</p>
+                <div class="cnt">New! Now you can scout the Universal Backlot from your desk. Click on the location you are interested in to see a full spherical view.</div>
+            </div>            
+            <span class="rightarrow"><img src="../images/common/icon6Bottom.png" /></span>
+            </a>
+            </div>
+            </li> 
+        
+			
+		</ul>
+    </div>
+</div>
+<!--content cover end--->
+</div>
+</div>
+<!--wrapper section end--->
+
+<!--footer section-->
+<script language="javascript">
+                    
+if (platform.iphone) {
+                   
+	document.write('<footer class="bottomGradient"><nav style="position:relative;"><div class="facilityHome"><a  onclick="getCurrentLandingPage()">Facility Home</a></div><div class="share" onclick="captureScreenshot();"><a>Send</a></div><div class="directory"><a onclick="loadDirectory();">Directory</a></div><div class="map" onclick="openMap();"><a >Map</a></div><div class="aboutus"><a href="aboutus.html">About Us</a></div><div class="privacy"><a  onclick="showPolicy()">Privacy Policy</a></div><div class="website"><a onclick="loadURL();">Website</a></div><div class="drive" onclick="openLot();"><a href ="beforeYouGetHere.html">Before you<br>get here</a></div><div class="idea"><a href ="mailto: studio.operations2@nbcuni.com">Have an idea?</a></div><div class="more" ><a>More</a></div><section class="moreTooltip"><section class="moreTooltipinner"><section class="moreTooltipiconcover"><section class="Tooltipicon popidea"><a href ="mailto: studio.operations2@nbcuni.com"><br>Have an idea?</a></section><section class="Tooltipicon popDrive" onclick="openLot();"><a href ="beforeYouGetHere.html"><br>Before you<br>get here</a></section><section class="Tooltipicontop popWebsite" ><a onclick="loadURL();"><br>Website</a></section><section class="Tooltipicontop popPrivacy" ><a  onclick="showPolicy()"><br>Privacy Policy</a></section><section class="Tooltipicon popAboutus"><a href="aboutus.html"><br>About Us</a></section></section><section class="dwnssArrrow"></section></section></section><section class="sendTooltip"><section class="moreTooltipinner"><section class="moreTooltipiconcover"><section class="sendtipicon popSMS" onclick="sendSMS();"><a ><br>SMS</a></section><section class="sendtipicon popMail" onclick="takeScreenShot(mailSubject,mailBody,true,toEMail);"><a ><br>Email</a></section></section><section class="dwnssArrrow"></section></section></section></nav></footer>')
+	}
+		else  {
+			 document.write('<footer class="bottomGradient"><nav style="position:relative;"><div class="facilityHome"><a  onclick="getCurrentLandingPage()">Facility Home</a></div><div class="share" onclick="captureScreenshot();"><a>Send</a></div><div class="directory"><a onclick="loadDirectory();">Directory</a></div><div class="map" onclick="openMap();" ><a >Map</a></div><div class="aboutus"><a href="aboutus.html">About Us</a></div><div class="privacy"><a  onclick="showPolicy()">Privacy Policy</a></div><div class="website"><a onclick="loadURL();">Website</a></div><div class="drive" onclick="openLot();"><a href ="beforeYouGetHere.html">Before you<br>get here</a></div><div class="idea"><a href ="mailto: studio.operations2@nbcuni.com">Have an idea?</a></div><div class="more" ><a>More</a></div><section class="moreTooltip"><section class="moreTooltipinner"><section class="moreTooltipiconcover"><section class="Tooltipicon popidea"><a href ="mailto: studio.operations2@nbcuni.com"><br>Have an idea?</a></section><section class="Tooltipicon popDrive" onclick="openLot();"><a href ="beforeYouGetHere.html"><br>Before you<br>get here</a></section><section class="Tooltipicontop popWebsite" ><a onclick="loadURL();"><br>Website</a></section><section class="Tooltipicontop popPrivacy" ><a  onclick="showPolicy()"><br>Privacy Policy</a></section><section class="Tooltipicon popAboutus"><a href="aboutus.html"><br>About Us</a></section></section><section class="dwnssArrrow"></section></section></section><section class="sendTooltip"><section class="moreTooltipinner"><section class="moreTooltipiconcover"><section class="sendtipicon popSMS" ><a href="sms:?body=Universal Studios General Contact %0A Email:studio.operations@nbcuni.com %0A  Phone: 1.800.892.1979"><br>SMS</a></section><section class="sendtipicon popMail" onclick="takeScreenShot(mailSubject,mailBody,true,toEMail);"><a ><br>Email</a></section></section><section class="dwnssArrrow"></section></section></section></nav></footer>')
+				 
+		 }
+</script>
+<!--footer section end-->
+</body>
+</html>
