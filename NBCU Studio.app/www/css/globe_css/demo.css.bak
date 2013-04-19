@@ -1,0 +1,253 @@
+body {
+    background: black;
+    margin: 0;
+    padding: 0;
+    color: #DDD;
+    text-align: center;
+	height:100%;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+a {
+    color: white;
+}
+
+#demo {
+    overflow: hidden;
+}
+
+#description {
+    text-align: left;
+    float: left;
+    width: 49%;
+    max-width: 500px;
+    padding-top: 50px;
+    padding-left: 20px;
+}
+
+#showoff {
+    width: 100%;
+	height:100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	
+}
+#container {
+	position: relative;
+	display: inline-block;
+	width: 400px;
+	height: 400px;
+}
+
+.newyork_loc {
+	 /*background: url(../../images/globe_imgs/newyork_pointer.png) center bottom no-repeat;*/
+	 background:#662dff;
+}
+.chicago_loc {
+	/* background: url(../../images/globe_imgs/chicago_pointer.png) center bottom no-repeat;*/
+	background:#ff4100;
+}
+.universalstudio_loc {
+	/* background: url(../../images/globe_imgs/universalstudio_pointer.png) center bottom no-repeat;*/
+	background:#c1f22c;
+}
+
+.name{
+	position:absolute;
+	border:1px solid #fff;
+	background:url(../../images/globe_imgs/name_bg.png) repeat;
+	padding:5px;
+	font-size:13px;
+	border-radius:5px;
+	z-index:40;
+}
+
+.newyork_arrow{
+	  background:url(../../images/globe_imgs/left_arrow.png) no-repeat;
+	  position:absolute;
+	  top:-20px;
+	  left:20px;
+	  text-indent:-9999em;
+	  width:21px;
+	  height:16px;
+	  z-index:50;
+}
+.chicago_arrow{
+	  background:url(../../images/globe_imgs/right_arrow.png) no-repeat;
+	  position:absolute;
+	  top:-20px;
+	  left:-11px;
+	  text-indent:-9999em;
+	  width:21px;
+	  height:16px;
+	  z-index:50;
+}
+.universal_studios_arrow{
+	  background:url(../../images/globe_imgs/right_arrow.png) no-repeat;
+	  position:absolute;
+	  top:-20px;
+	  left:0px;
+	  text-indent:-9999em;
+	  width:21px;
+	  height:16px;
+	  z-index:50;
+}
+.location{
+	  position: absolute;
+	  cursor: pointer;
+	  z-index:30;
+	  border-radius:50%;
+	  border:2px solid #fff;
+	  left:0;
+	  top:0;
+	  margin:0;
+	  padding:0;
+}
+#locations{
+	  z-index:20;
+}
+#sphere,#flights{
+	  z-index:10;
+}
+
+@media (min-width: 320px){
+	#sphere, #flights, #glow-shadows, #locations, #drag {
+		position: absolute;
+		left: 50%;
+		width: 280px;
+		height: 280px;
+		top:50%;
+		margin:-140px 0 0 -140px;
+	}
+	.location {
+		width: 15px;
+		height: 15px;
+	}
+	.name{
+		font:bold 12px arial;
+	}
+	.newyork_name{
+		 top:-46px;
+		 color:#9886ce;
+		 width:55px;
+		 left:5px;
+	}
+	.universal_studios_name{
+		 color: #A2BC4D;
+		 left: -92px;
+		 top: -46px;
+		 width: 110px;
+	}
+	.chicago_name {
+		 color: #FE7D52;
+		 left: -37px;
+		 top: -46px;
+		 width: 45px;
+	}
+	.universal_studios_arrow{
+		left:-15px;
+	}
+}
+
+@media (min-width: 600px) {
+	#sphere, #flights, #glow-shadows, #locations, #drag {
+		position: absolute;
+		left: 50%;
+		width: 400px;
+		height: 400px;
+		top:50%;
+		margin:-200px 0 0 -200px;
+	}
+	.location {
+		width: 20px;
+		height: 20px;
+	}
+	.name{
+		font:bold 15px arial;
+	}
+	.newyork_name{
+		 top:-49px;
+		 color:#9886ce;
+		 width:75px;
+		 left:5px;
+	}
+	.chicago_name {
+		color: #FE7D52;
+		left: -50px;
+		top: -49px;
+		width: 60px;
+	}
+	.universal_studios_name{
+		 top:-49px;
+		 color:#a2bc4d;
+		 width:126px;
+		 left:-110px;
+	}
+	.universal_studios_arrow{
+		left:-15px;
+	}
+}
+@media (min-width: 768px) {
+	#sphere, #flights, #glow-shadows, #locations, #drag {
+		position: absolute;
+		left: 50%;
+		width: 600px;
+		height: 600px;
+		top:50%;
+		margin:-300px 0 0 -300px;
+	}
+	.location {
+		width: 30px;
+		height: 30px;
+	}
+	.name{
+		font:bold 18px arial;
+	}
+	.newyork_name{
+		 top:-53px;
+		 color:#9886ce;
+		 width:100px;
+		 left:5px;
+	}
+	.chicago_name{
+		 top:-53px;
+		 left:-68px;
+		 color:#fe7d52;
+		 width:80px;
+	}
+	.universal_studios_name{
+		 top:-53px;
+		 color:#a2bc4d;
+		 width:160px;
+		 left:-132px;
+	}
+}
+
+
+#glow-shadows {
+    top: 1px;
+    left: 1px;
+}
+
+#glow-shadows.earth {
+    background: url(../../images/globe_imgs/earth-glow-shadows.png);
+}
+
+#glow-shadows.mars {
+    background: url(../../images/globe_imgs/mars-glow-shadows.png);
+}

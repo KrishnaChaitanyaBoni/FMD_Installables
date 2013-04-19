@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+
+<title>Universal Studios - Map</title>
+
+<link href="../css/filmSet/backlotStyle.css" rel="stylesheet" type="text/css" />
+<link href="../css/common/common.css" rel="stylesheet" type="text/css" />
+<link href="../css/common/gradients.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../css/common/jquery-ui.css" />
+<link href="../css/animate/animate.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/lib/cordova-1.9.0.js"></script>
+<script type="text/javascript" src="../js/lib/ChildBrowser.js"></script>
+<script type="text/javascript" src="../js/lib/ChildBrowser_android.js"></script>
+<script src="../js/lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery.slimscroll.js"></script>
+<script src="../js/ui/navigation.js"></script>
+<script src="../js/ui/footer.js"></script>
+<script src="../js/ui/routemapPopup.js"></script>
+
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"> </script>
+
+<script src="../js/service/infobox.js"></script>
+<script src="../js/db/dBHelper.js"></script>
+<script src="../js/lib/jquery-ui.js"></script>
+<script src="../js/lib/marker.js"></script>
+<script src="../js/service/maps.js"></script>
+<script src="../js/service/routeMap.js"></script>
+<script src="../js/lib/SMSComposer.js"></script>
+<script src="../js/lib/EmailComposer.js"></script>
+<script src="../js/lib/Screenshot.js"></script>
+  <script>
+$(document).ready(function(){
+              var selectedCategory= localStorage.getItem("fromBack"); 
+                  if(selectedCategory=="Stage"){
+                  $(".mapDiv1").show();
+                  $(".mapDiv2, .mapDiv3, .mapDiv4, .mapDiv5, .mapDiv6, .mapDiv7, .mapDiv8, .mapDiv9").hide();	
+                  }
+                  else if(selectedCategory=="Backlot"){
+                  $(".mapDiv2").show();
+                  $(".mapDiv1, .mapDiv3, .mapDiv4, .mapDiv5, .mapDiv6, .mapDiv7, .mapDiv8, .mapDiv9").hide();
+                  }
+                  else if(selectedCategory=="Production Services"){
+                  $(".mapDiv3").show();
+                  $(".mapDiv1, .mapDiv2, .mapDiv4, .mapDiv5, .mapDiv6, .mapDiv7, .mapDiv8, .mapDiv9").hide();
+                  }
+                  else if(selectedCategory=="Post Production"){
+                  $(".mapDiv4").show();
+                  $(".mapDiv1, .mapDiv2, .mapDiv3, .mapDiv5, .mapDiv6, .mapDiv7, .mapDiv8, .mapDiv9").hide();
+                  }
+                  else if(selectedCategory=="Working on the lot"){
+                  $(".mapDiv5").show();
+                  $(".mapDiv1, .mapDiv2, .mapDiv3, .mapDiv4, .mapDiv6, .mapDiv7, .mapDiv8, .mapDiv9").hide();
+                  }
+                  else if(selectedCategory=="Digital Services"){
+                  $(".mapDiv6").show();
+                  $(".mapDiv1, .mapDiv2, .mapDiv3, .mapDiv4, .mapDiv5, .mapDiv7, .mapDiv8, .mapDiv9").hide();
+                  }
+                  else if(selectedCategory=="General"){
+                  $(".mapDiv7").show();
+                  $(".mapDiv1, .mapDiv2, .mapDiv3, .mapDiv4, .mapDiv5, .mapDiv6, .mapDiv8, .mapDiv9").hide();
+                  }
+                  else if(selectedCategory=="Parking Lots"){
+                  $(".mapDiv8").show();
+                  $(".mapDiv1, .mapDiv2, .mapDiv3, .mapDiv4, .mapDiv5, .mapDiv6, .mapDiv7, .mapDiv9").hide();
+                  }
+                  else{
+                  $(".mapDiv9").show();
+                  $(".mapDiv1, .mapDiv2, .mapDiv3, .mapDiv4, .mapDiv5, .mapDiv6, .mapDiv7, .mapDiv8").hide();    
+                  }
+    
+                  getPlatform();
+                  $(".mapSlider").hide();
+                  $("footer nav .map a").addClass("mapHover");
+                  
+                  var hSelect = $(".selectSlider").height();
+                  var aSelect = hSelect/2;
+                  var wSelect = $(window).height() / 2;
+                  var tSelect = wSelect - aSelect + 10;
+                  $(".mapSlider").css("right","-246px");
+                  $(".mapSlider").css("top", tSelect);
+                  $(".selectSlider").css("bottom","-340px");
+                  
+                  $("footer nav .more a, footer nav .share a").click(function(){
+                                                                     $(".selectSlider").animate({bottom:"-340px"});
+                                                                     $(".mapcategoryLabelselect").addClass("mapUpArrowSelect");
+                                                                     $(".mapcategoryLabelselect").removeClass("mapDownArrowSelect");
+                                                                     });
+                  
+                  $(".mapcategoryLabelselect, .selectSlider .close, .selectSlider .listName").click(function(){
+                                                                                                    $(".selectSlider").show();
+                                                                                                    var gPos = $(".selectSlider").css("bottom");
+                                                                                                    if(gPos + "px" < 0 + "px")
+                                                                                                    {
+                                                                                                    $(".selectSlider").animate({bottom:"0px"});
+                                                                                                    $(".mapSlider").animate({right:"-246px"}, function(){		
+                                                                                                                            $(".mapcategoryLabelselect").removeClass("mapUpArrowSelect");
+                                                                                                                            $(".mapcategoryLabelselect").addClass("mapDownArrowSelect");
+                                                                                                                            });
+                                                                                                    
+                                                                                                    
+                                                                                                    }
+                                                                                                    else
+                                                                                                    {
+                                                                                                    setTimeout(function () {$(".selectSlider .listName").removeClass("listHighlight");},200);
+                                                                                                    $(".selectSlider").animate({bottom:"-340px"}, function(){
+                                                                                                                               $(".mapcategoryLabelselect").addClass("mapUpArrowSelect");
+                                                                                                                               $(".mapcategoryLabelselect").removeClass("mapDownArrowSelect");
+                                                                                                                               });
+                                                                                                    
+                                                                                                    }
+                                                                                                    });
+                  
+$(".mapIcn, .mapSlider .close, .mapSlider .listName").click(function(){
+ $(".mapSlider").show();
+	
+var hMap = $(".mapSlider").height();
+var aMap = hMap/2;
+var wMap = $(window).height() / 2;
+var tMap = wMap - aMap + 10;
+var rMap = $(".mapSlider").css("right");
+
+if(rMap + "px" < 0 + "px")
+{		
+$(".mapSlider").css("top", tMap);	
+$(".mapSlider").animate({right:"0px"});
+$(".selectSlider").animate({bottom:"-340px"});
+}
+else
+{
+$(".mapSlider").animate({right:"-246px"},function(){$(".mapSlider").hide();});
+}
+});
+$("footer nav .facilityHome a, footer nav .directory a, footer nav .map a, footer nav .idea a, footer nav .share a, footer nav .more a, footer nav .aboutus a, footer nav .privacy a, footer nav .website a, footer, header").click(function(){
+ var gPos = $(".selectSlider").css("bottom");
+if(gPos + "px" > -1 + "px")
+{
+$(".selectSlider").animate({bottom:"-340px"});
+ }
+      });
+                  
+$("footer nav .facilityHome a, footer nav .directory a, footer nav .map a, footer nav .idea a, footer nav .share a, footer nav .more a, footer nav .aboutus a, footer nav .privacy a, footer nav .website a, footer, header, body").click(function(){
+
+	var rMap = $(".mapSlider").css("right");
+	
+	if(rMap == 0 + "px"){$(".mapSlider").animate({right:"-246px"});}
+	});
+                  $(".backlotBackV2").bind('touchstart', function(){
+                                           $(".backlotBackV2").addClass("backlotBackV2Roll");setTimeout(function () {$(".backlotBackV2").removeClass("backlotBackV2Roll")},200);
+                                           });
+                  
+                  $(".backlotHeadericonV2").bind('touchstart', function(){
+                                                 $(".backlotHeadericonV2").addClass("backlotHeadericonV2Roll");setTimeout(function () {$(".backlotHeadericonV2").removeClass("backlotHeadericonV2Roll")},200);
+                                                 });
+                  $(".mapHelp img").bind('touchstart', function(){
+                                          $('.mapHelp img').attr('src','../images/maps/roll/help.png');
+                                         setTimeout(function () {$('.mapHelp img').attr('src','../images/maps/help.png');},200);
+                                                 });
+                  $(".mapLocation img").bind('touchstart', function(){
+                                         $('.mapLocation img').attr('src','../images/maps/roll/currentloactionIcon.png');
+                                         setTimeout(function () {$('.mapLocation img').attr('src','../images/maps/currentloactionIcon.png');},200);
+                                         });
+                  $(".mapSelect img").bind('touchstart', function(){
+                                             $('.mapSelect img').attr('src','../images/maps/roll/selectIcon.png');
+                                             setTimeout(function () {$('.mapSelect img').attr('src','../images/maps/selectIcon.png');},200);
+                                             });
+                  
+                  });
+</script>
+
+</head>
+<body onload="checkConnection();initDB();" style="overflow:hidden;">
+<!--Header section-->
+    <header class="uniTXTColor">
+        <div class="headergradiant headerInnerCover">
+            <div id="headerBackHideDiv" class="headerBackHide"></div>
+            
+            <div id="backButtonDiv" class="headerBack backlotBackV2" onclick="javascript:history.back()"></div>      
+            <span class="headings">Universal Studios</span>
+            <div class="headerIcon"><a class="backlotHeadericonV2" ></a></div>
+        </div>
+        <div class="trvGameHDgradient font16B subheadings" style="position:relative;">
+            <span>Map</span>
+            <div class="mapHelp"><img class="mapIcn" src="../images/maps/help.png"/></div>
+            <div class="mapLocation mapAdj" ><img src="../images/maps/currentloactionIcon.png" onclick="getGeoLocation()"/></div>
+           
+            
+        </div>
+        <!--Header nav popup-->
+        <div class="homeNav">
+            <div class="homeNavinner">
+                <div class="homeNavArrow"><img src="../images/common/homeNavArrow.png"/></div>
+                <div class="homeNavChicago" >Chicago</div>
+                <div class="homeNavNewyork" >New York</div>
+            </div>
+        </div>
+        <!--Header nav popup end-->
+    </header>
+<!--Header section end-->
+
+<!--wrapper section--->
+    <div id="wrapper" class="trvwrapperTop UniWrapperBG">
+        <div class="mapWrapperInner" id="scrollDiv">
+            <div id="scrollDiv">
+                 
+                <!--Map area--->	
+                <div class="mapContainer" id="googlemap">
+                    <script language="javascript">getDefaultCategory()</script>		
+                </div>
+                <!--Map area end--->
+            </div>
+        </div>
+    </div>
+    <div id="mapCategory" class="mapcategoryLabelselect mapUpArrowSelect"></div>
+    <div class="mapcategoryLabel">
+    <div class="mapDiv1">Stages</div>
+    <div class="mapDiv2">Backlot</div>
+    <div class="mapDiv3">Production Services</div>
+    <div class="mapDiv4">Post Production Media Services</div>
+    <div class="mapDiv5">Working on the Lot</div>
+    <div class="mapDiv6">Digital Services</div>
+    <div class="mapDiv7">General</div>
+    <div class="mapDiv8">Parking Lots</div>
+    <div class="mapDiv9">Office Buildings</div>    
+    </div>
+    <div class="mapcategoryLabelBG"></div>
+    
+    <div id="pop">
+        <a class="close"></a>
+        <div id="cont" style="overflow:auto!important;" class="routeCNT"></div>
+    </div>
+    
+    <div class="RoutemappopHide">
+        <div id="RoutePOP">
+             <div style="position:relative;height:35px;width:100%;background:#ccc; text-align:left;"><div style="position:absolute;top:7px;left:14px; font-weight:bold;">Direction list</div><div style="width:20px; height:30px;position:absolute;right:10px;top:7px;"><img src="../images/footer/mailicon.png"/></div></div>
+            <script language="javascript">getDirectionList()</script>
+            
+        </div>
+        
+
+    </div>
+    
+    <div class="selectSliderCoverOuter">
+        <div class="selectSliderCover">
+            <div class = "selectSlider">
+                <div id="selectSliderinnerId" class = "selectSliderinner">
+                    <div class="listName" id="Stage" onclick="mapCategoryStage()" >Stages</div>
+                    <div class="listName" id="Backlot" onclick="mapCategoryBacklot()">Backlot</div>
+                    <div class="listName" id ="Production Services" onclick="mapCategoryProductionServices()">Production Services</div>
+                    <div class="listName" id="Post Production" onclick="mapCategoryPostProduction()">Post Production Media Services</div>
+                    <div class="listName" id="Working on the lot" onclick="mapCategoryWorkingonthelot()">Working on the Lot</div>
+                    <div class="listName" id="Digital Services" onclick="mapCategoryDigitalServices()">Digital Services</div>
+                    <div class="listName" id="General" onclick="mapCategoryGeneral()">General</div>
+                    <div class="listName" id="Parking Lots" onclick="mapCategoryParkingLots()">Parking Lots</div>
+                    <div class="listName" id="Office Buildings" onclick="mapCategoryOffice()">Office Buildings</div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+    <div class = "mapSlider">    
+    <div class = "close"></div>
+    <div class = "mapSliderinner" style="height:325px!important;">
+    <div id="scrollDiv2">
+  
+    <div style="clear:both;">
+	<div style="width:25px;padding:4px;border-radius:6px 0 0 6px;float:left;background:#323232;">
+    <img src="../images/maps/currentloactionIcon.png">
+    </div>
+    <div  style="width:170px;padding:4px;margin:0 0 10px 0;min-height:50px;border-radius:0 6px 6px 6px;float:left;background:#212121;">View Current Location helps to identify your current spot on the map.</div>
+    </div>
+    
+    <div style="clear:both;">
+	<div style="width:25px;padding:4px;border-radius:6px 0 0 6px;float:left;background:#323232;">
+    <img src="../images/maps/help.png">
+    </div>
+    <div  style="width:170px;padding:4px;margin:0 0 10px 0;min-height:50px;border-radius:0 6px 6px 6px;float:left;background:#212121;">Help guides you to use the maps.</div>
+    </div>
+    
+        
+    <div style="clear:both;">
+	<div style="width:25px;padding:4px;border-radius:6px 0 0 6px;float:left;background:#323232;">
+    <img src="../images/maps/mapDirectionicon.png">
+    </div>
+    <div  style="width:170px;padding:4px;margin:0 0 10px 0;min-height:50px;border-radius:0 6px 6px 6px;float:left;background:#212121;">View Direction helps to find the path from user's current location to the desire location</div>
+    </div>
+    
+    <div style="clear:both;">
+	<div style="width:25px;padding:4px;border-radius:6px 0 0 6px;float:left;background:#323232;">
+    <img src="../images/maps/pegman.png">
+    </div>
+    <div  style="width:170px;padding:4px;min-height:50px;border-radius:0 6px 6px 6px;float:left;background:#212121;">Pegman for Street View needs to be dragged and dropped on the route to view the street view. If the Pegman stays Amber, then the street view would be available else if he turns Grey the street view would not be available. </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <!--footer section-->
+    <script language="javascript">loadMailSMSDisabledFooter()</script>
+    <!--footer section end-->
+    
+</body>
+</html>
