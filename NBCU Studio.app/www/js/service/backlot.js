@@ -1,33 +1,33 @@
 $(document).ready(function(){
-    $(".selectSlider").hide();
-    var h = $(".selectSlider").height();
-    var a = h/2;
-    var w = $(window).height() / 2;
-    var t = w - a + 10;
-    $(".selectSlider").css("left","-246px");
-    $(".selectSlider").css("top", t);
-    $(".selectIcn, .selectSlider .close, .selectSlider .listName").click(function(){
-    $(".selectSlider").show();
-    var h = $(".selectSlider").height();
-    var a = h/2;
-    var w = $(window).height() / 2;
-    var t = w - a + 10;
-    var r = $(".selectSlider").offset().left;
-    if(r < -3)
-    {
-    $(".selectSlider").css("top", t);	
-    $(".selectSlider").animate({left:"-3px"});
-    }
-    else
-    {
-    $(".selectSlider").animate({left:"-246px"},function(){$(".selectSlider").hide();$(".selectSlider .listName").removeClass("listHighlight");});
-     }
-     });
-    $("footer nav .facilityHome a, footer nav .directory a, footer nav .map a, footer nav .idea a, footer nav .share a, footer nav .more a, footer nav .aboutus a, footer nav .privacy a, footer nav .website a, footer, header, body").click(function(){ 
-    var r = $(".selectSlider").offset().left;
-    if(r == -3){$(".selectSlider").animate({left:"-246px"},function(){$(".selectSlider").hide();$(".selectSlider .listName").removeClass("listHighlight");});}
-    });
-    });
+                  $(".selectSlider").hide();
+                  var h = $(".selectSlider").height();
+                  var a = h/2;
+                  var w = $(window).height() / 2;
+                  var t = w - a + 10;
+                  $(".selectSlider").css("left","-246px");
+                  $(".selectSlider").css("top", t);
+                  $(".selectIcn, .selectSlider .close, .selectSlider .listName").click(function(){
+                                                                                       $(".selectSlider").show();
+                                                                                       var h = $(".selectSlider").height();
+                                                                                       var a = h/2;
+                                                                                       var w = $(window).height() / 2;
+                                                                                       var t = w - a + 10;
+                                                                                       var r = $(".selectSlider").offset().left;
+                                                                                       if(r < -3)
+                                                                                       {
+                                                                                       $(".selectSlider").css("top", t);	
+                                                                                       $(".selectSlider").animate({left:"-3px"});
+                                                                                       }
+                                                                                       else
+                                                                                       {
+                                                                                       $(".selectSlider").animate({left:"-246px"},function(){$(".selectSlider").hide();$(".selectSlider .listName").removeClass("listHighlight");});
+                                                                                       }
+                                                                                       });
+                  $("footer nav .facilityHome a, footer nav .directory a, footer nav .map a, footer nav .idea a, footer nav .share a, footer nav .more a, footer nav .aboutus a, footer nav .privacy a, footer nav .website a, footer, header, body").click(function(){ 
+                    var r = $(".selectSlider").offset().left;
+                    if(r == -3){$(".selectSlider").animate({left:"-246px"},function(){$(".selectSlider").hide();$(".selectSlider .listName").removeClass("listHighlight");});}
+                        });
+                  });
 
 var combined;
 var deptServiceName;
@@ -36,11 +36,11 @@ var connectionAvailable=true;
 function getRoute(latitude,longitude,bckname){
     checkConnection();
 	if(connectionAvailable !=="false"){
-	combined=(latitude + "," +longitude);
-	localStorage.setItem('lat',latitude);
-	localStorage.setItem('lon',longitude);
-   	localStorage.setItem('serviceName',bckname)
-	window.location='../html/routeMap.html';
+        combined=(latitude + "," +longitude);
+        localStorage.setItem('lat',latitude);
+        localStorage.setItem('lon',longitude);
+        localStorage.setItem('serviceName',bckname)
+        window.location='../html/routeMap.html';
     }
 }
 
@@ -126,7 +126,7 @@ var deviceInfo = function(){
     states[Connection.CELL_3G]  = 'Cell 3G connection';
     states[Connection.CELL_4G]  = 'Cell 4G connection';
     states[Connection.NONE]     = 'No network connection';
-    
+     
     if(states[networkState] == "Unknown connection" || states[networkState] == "No network connection")
     {
         connectionAvailable = 'false';
@@ -149,13 +149,13 @@ function checkConnection(){
 function getServiceDetails(element){
     checkConnection();
 	if(connectionAvailable !=="false"){
-    departmentServiceName = element.id;
-    localStorage.setItem('serviceName',departmentServiceName);
-    var deptServiceName = "%"+element.id +"%";
-    myDB.transaction(function(transaction) {
-                     transaction.executeSql('select latitude,longitude from mapslocations where display_name like ? ',[deptServiceName], getServiceDetailsSuccessHandler, errorHandler);
-                     
-                     });
+        departmentServiceName = element.id;
+        localStorage.setItem('serviceName',departmentServiceName);
+        var deptServiceName = "%"+element.id +"%";
+        myDB.transaction(function(transaction) {
+                         transaction.executeSql('select latitude,longitude from mapslocations where display_name like ? ',[deptServiceName], getServiceDetailsSuccessHandler, errorHandler);
+                         
+                         });
     }
     
     

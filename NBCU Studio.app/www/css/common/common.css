@@ -76,8 +76,8 @@ header{
 
 header .logo{background:url(../../images/common/logo.jpg) no-repeat;width:127px;height:32px;margin:6px auto 0 auto;}
 .headerInnerCover{clear:both;width:100%; text-align:center;	height:44px;}
-.headerIcon{float: right;margin: 0;width: 51px;height: 36px;}
-.headerIcon a{float: right;height: 30px;width: 30px;padding: 7px 10px 0 0;}
+.headerIcon{float: right;margin: 0;width: 40px;height: 36px;}
+.headerIcon a{float: left;height: 30px;width: 30px;padding: 7px 10px 0 0;}
 .headerBack{float:left;	margin: 7px 0 0 10px;width:51px; height:30px;}
 .headerBackHide{float:left;	margin: 7px 0 0 10px;width:51px; height:1px;}
 

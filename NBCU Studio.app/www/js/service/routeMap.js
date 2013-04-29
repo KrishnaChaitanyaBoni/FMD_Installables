@@ -83,8 +83,9 @@ function getMapRoute(){
     var lonNum = parseFloat(lon);
     //passing source destination value to draw route
     var request = {
-    // origin:new google.maps.LatLng(34.142113,-118.353863),
-     origin:new google.maps.LatLng(currlatNum,currlonNum),
+    origin:new google.maps.LatLng(34.142113,-118.353863),
+//     origin:new google.maps.LatLng(currlatNum,currlonNum),
+//        origin:new google.maps.LatLng( 40.738933,-74.003906),//NY
     destination:new google.maps.LatLng(latNum,lonNum),
     travelMode: google.maps.TravelMode.DRIVING
     };
@@ -93,8 +94,9 @@ function getMapRoute(){
                             directionsDisplay.setDirections(response);
                             }
                             });
- //var mapurl = "http://maps.google.com/maps?saddr=(34.142113,-118.353863)"+"&daddr="+latNum+","+lonNum;
-  var mapurl = "http://maps.google.com/maps?saddr="+currlatNum+","+currlonNum+"&daddr="+latNum+","+lonNum;
+  var mapurl = "http://maps.google.com/maps?saddr=(34.142113,-118.353863)"+"&daddr="+latNum+","+lonNum;
+//  var mapurl = "http://maps.google.com/maps?saddr="+currlatNum+","+currlonNum+"&daddr="+latNum+","+lonNum;
+//     var mapurl = "http://maps.google.com/maps?saddr=( 40.738933,-74.003906)"+"&daddr="+latNum+","+lonNum;//NY
    localStorage.setItem("link",mapurl);
     directionsDisplay.setPanel(document.getElementById('routelistCnts'));
 }

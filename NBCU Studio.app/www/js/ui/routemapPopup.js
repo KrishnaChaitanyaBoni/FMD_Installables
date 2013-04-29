@@ -19,7 +19,8 @@ $(document).ready(function()
                                                    
                                                    $('body').append('<div id="mask"></div>');
                                                    $('#mask').fadeIn(300);
-                                                   
+                                                   $('#scrollDiv6').slimscroll();
+
                                                    return false;
                                                    });
                   

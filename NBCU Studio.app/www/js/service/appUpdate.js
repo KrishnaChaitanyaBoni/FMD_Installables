@@ -60,7 +60,7 @@ function parseXML(data){
 }
 function parseInfo(){
 	$.ajax({  
-		   url:"http://stage.filmmakersdestination.com/updateDirectory.xml",
+		   url:APP_UPDATE_XML_URL,
            dataType:"xml",   
            type: "GET",  
            success:function(data) {

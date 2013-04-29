@@ -6,7 +6,7 @@
 	<dict>
 		<key> Default-Portrait@2x~ipad.png</key>
 		<data>
-		5f5FmU4UEDjiEwIHd7YkfPon8kw=
+		2UsY57nSjYzJGyS5F83xcKs+R68=
 		</data>
 		<key>Capture.bundle/controls_bg.png</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>ChildBrowserViewController.nib</key>
 		<data>
-		Jk6GLV3lT7cLQnOXl6gK09zle2E=
+		YaPVAmE1aFO3LF3wgPEAk2Nb1gs=
 		</data>
 		<key>Cordova.plist</key>
 		<data>
@@ -130,39 +130,39 @@
 		</data>
 		<key>Default-568h@2x~iphone.png</key>
 		<data>
-		5nbXc86zLfDozVf2cEOaFRAygm4=
+		A9sl4hTGGwNpuBsv0cxxgDmU+YU=
 		</data>
 		<key>Default-Landscape@2x~ipad.png</key>
 		<data>
-		WZfyyXsAmGBTai/aFWliXf1OH5M=
+		HW1bqFNAurFynObLtu0YeB24KnQ=
 		</data>
 		<key>Default-Landscape~ipad.png</key>
 		<data>
-		jnh8i5/RpRjijNicbZ3bx3UmYEM=
+		7YYqJHEIanaY8pourr5+uPb2a6g=
 		</data>
 		<key>Default-Portrait~ipad.png</key>
 		<data>
-		sKwAslBC4wtlFB9EC19cEdNaeqM=
+		2kudEwdN48bpEBgqW8MjuP556MY=
 		</data>
 		<key>Default@2x~iphone.png</key>
 		<data>
-		EfBGcOCZDwmtPACgxGDaOfTkiWE=
+		RVh3weaXh9Q9zIP4wP3u+gzn+5g=
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		Kp3CkpIsorOpTkjmdNU5fzR00Jk=
+		HD0i6erkEl9pyfo5PfsE3pbxBXE=
 		</data>
 		<key>NBCU_OTL_App_114x114px.png</key>
 		<data>
-		gbNOTbrmkpylmNnTOStFIwQFnDo=
+		spyjQe5Y8RthJxzD7Zoo1rVoutE=
 		</data>
 		<key>NBCU_OTL_App_57x57px.png</key>
 		<data>
-		l6CtuE7JDYPDVcESeB/f4QnTdXY=
+		5WORj6BuSv7PuPpUpPKryt0vPVI=
 		</data>
 		<key>NBCU_OTL_App_72x72px.png</key>
 		<data>
-		rmNmV1vhk891d9rk0R5NYi+80y0=
+		3sYlkDpghMfMfwJvmi9q/xdJQEw=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -190,15 +190,15 @@
 		</data>
 		<key>icon-72.png</key>
 		<data>
-		KJWvk4dbVl5+TtUxFO/QPme6LjA=
+		gtstbSURv0M0aH4P0v/IJ6qiugM=
 		</data>
 		<key>icon.png</key>
 		<data>
-		JAOlcLuCNQK5Itwxh8Y1xd5frRI=
+		aQd25jxzaRXXTj4bATWynlGxSAY=
 		</data>
 		<key>icon@2x.png</key>
 		<data>
-		LUJ3txzytSByCRYLhax7yg/JkOk=
+		V0Vvmm5fm2QQ/HY19CBXkeByFiM=
 		</data>
 		<key>se.lproj/Localizable.strings</key>
 		<data>
@@ -218,7 +218,7 @@
 		</data>
 		<key>www/css/common/common.css</key>
 		<data>
-		grKnOIkIuRB5yOua3o9SxTkmBfI=
+		5PHBD3UprGcGJN31ODe8iE4tHq8=
 		</data>
 		<key>www/css/common/gradients.css</key>
 		<data>
@@ -230,7 +230,7 @@
 		</data>
 		<key>www/css/filmSet/backlotStyle.css</key>
 		<data>
-		Ad7xL4UBo8lEgBOa2YppfcfzJ5Q=
+		jPMf7mFJ7h1W4xu79Q9SkcyFEZY=
 		</data>
 		<key>www/css/filmSet/stageChicago.css</key>
 		<data>
@@ -243,18 +243,6 @@
 		<key>www/css/filmSet/stageStyle.css</key>
 		<data>
 		+OAyuQ0kNM4Oi7/leYvI9cQXank=
-		</data>
-		<key>www/css/globe_css/demo.css</key>
-		<data>
-		qVkuQUM571Ql/g2b4s3hrIO1HTM=
-		</data>
-		<key>www/css/globe_css/demo.css.bak</key>
-		<data>
-		6BmNsoFLlySOVjWu+yj/TZRf0eU=
-		</data>
-		<key>www/css/globe_css/demoOld.css</key>
-		<data>
-		ZyUvUdjed1Kyjj6QhxjWF9vd58w=
 		</data>
 		<key>www/css/services/deptChicago.css</key>
 		<data>
@@ -298,63 +286,63 @@
 		</data>
 		<key>www/html/aboutus.html</key>
 		<data>
-		B9nSuCcF65SKwfLyW45jPNWcuRc=
+		Y+/tJl2jBEbACOl0QqKHoOda9AA=
 		</data>
 		<key>www/html/backlot.html</key>
 		<data>
-		Os5vmPQgpyOw1/mDZvR1bvitVbI=
+		qSaTQJOlyYRXBoGPU7VYV1coaQw=
 		</data>
 		<key>www/html/beforeYouGetHere.html</key>
 		<data>
-		LhdVchOZmvs5mIAUJJFZ7x1rsWg=
+		oWNnGtayvfXvYGsENZzmsYeAMyc=
 		</data>
 		<key>www/html/chicagoLanding.html</key>
 		<data>
-		UiPxAW5o46zuO+PX8w1Cpn9qjCQ=
+		h7UvjbvnspzrbjudWDU46up/SEs=
 		</data>
 		<key>www/html/departmentServicesChicago.html</key>
 		<data>
-		h9GwAcZUJ+Q9I5EUw1KFxkVYpes=
+		Vr6HSPI8BGI4wcg0raqvlRH2rmQ=
 		</data>
 		<key>www/html/departmentServicesNewyork.html</key>
 		<data>
-		kYky+wpBHRAXVmoKl4f9d2nJVM0=
+		2AJ/yDqscrwddwUSEtSUejup7dU=
 		</data>
 		<key>www/html/departmentServicesUniversal.html</key>
 		<data>
-		QL8fHucwxULgB3e6C1ehH68jlL4=
+		XwjRPbIVnHihiRnZVofGNxBjw9I=
 		</data>
 		<key>www/html/directory.html</key>
 		<data>
-		vTLiCIjJ4k/B63TgmpAl5P2dQYA=
+		xE3HreOp8vB7/MIeBMxpJc5VRHU=
 		</data>
 		<key>www/html/map.html</key>
 		<data>
-		G/OU/OAwGh2eSrzd9pB3bJDXidU=
+		Qu09l/qEZ4JAyfnNgM/xF+Q0Fcs=
 		</data>
 		<key>www/html/newyorkLanding.html</key>
 		<data>
-		NA06t3uTdAsRmRKqQRdb9SY0b9w=
+		y9Ekb6y5gAuCK1iRRA90B04iRzc=
 		</data>
 		<key>www/html/routeMap.html</key>
 		<data>
-		sEdHI8RuS8hD/KYE7luXM3mKiPs=
+		G9a42ZglcxzZYfU4Une8MMJoMUY=
 		</data>
 		<key>www/html/soundStagesUniversal.html</key>
 		<data>
-		t/es4zqmOJ0c7nKbTvShVBg784A=
+		SiUyIa15NGNbP5atRdUuBFlXmOo=
 		</data>
 		<key>www/html/soundstageChicago.html</key>
 		<data>
-		0U8sEWWubuIrKz6dYSeeyFgBPq8=
+		8nP1q+ZRQq28LTk3C5E21sCDDKU=
 		</data>
 		<key>www/html/soundstageNewyork.html</key>
 		<data>
-		dh6C6Ak2HHBjoB9cA7jD/8tDuWU=
+		JfLZJEtUO7oC1TnEEuLnespgn9M=
 		</data>
 		<key>www/html/universalLanding.html</key>
 		<data>
-		rUxWCoTpBN15vRgYcohK/Z+9bsA=
+		8YTUXz6xN0FT335ermFpiQJtYuE=
 		</data>
 		<key>www/images/Thumbs.db</key>
 		<data>
@@ -948,86 +936,6 @@
 		<data>
 		9Z2lq38huOshkPhp2l+JN6UBp+U=
 		</data>
-		<key>www/images/globe_imgs/Thumbs.db</key>
-		<data>
-		ou0rZQ0UGWJlUTZVwqTFF7PWZNY=
-		</data>
-		<key>www/images/globe_imgs/above_1024.jpg</key>
-		<data>
-		aktslMrwpzKQKGsAKlQDUI12TxY=
-		</data>
-		<key>www/images/globe_imgs/chicago.png</key>
-		<data>
-		+2Jb1gVgLe1QKKbyjeo08Q7XVE4=
-		</data>
-		<key>www/images/globe_imgs/chicagoRoll.png</key>
-		<data>
-		ovZkb5w4UbucHAGhvlZjyJ78qAg=
-		</data>
-		<key>www/images/globe_imgs/earth1024x1024.jpg</key>
-		<data>
-		4z9Z8WNh0/wektcQuXeAerbhBpE=
-		</data>
-		<key>www/images/globe_imgs/earth1024x1024_1.jpg</key>
-		<data>
-		oF63qdZ6zeI1pkT6acqM4TOqDL0=
-		</data>
-		<key>www/images/globe_imgs/earth1024x1024_3.jpg</key>
-		<data>
-		AKJ/RnaGD5JY9i1/SIot6Lh4diY=
-		</data>
-		<key>www/images/globe_imgs/earth1024x1024_riginal.jpg</key>
-		<data>
-		Dxd6DAJwaI3ugUZoXveqDHJmDNg=
-		</data>
-		<key>www/images/globe_imgs/earth1024x1024_white.jpg</key>
-		<data>
-		JNmWZiY3SMFRfGZ8pKYmhWZWmRE=
-		</data>
-		<key>www/images/globe_imgs/galaxy.jpg</key>
-		<data>
-		hz8OUwCMbpGEtXDpnAtO6PLMA1g=
-		</data>
-		<key>www/images/globe_imgs/globeGlow.png</key>
-		<data>
-		OAslDew2DmsLz2DlB6NuUsQQOI4=
-		</data>
-		<key>www/images/globe_imgs/globe_background.png</key>
-		<data>
-		BNOcTx6ur/x1o0iW/0jklibmLrs=
-		</data>
-		<key>www/images/globe_imgs/left_arrow.png</key>
-		<data>
-		ddAU4nTsIavKPiFezpMatDu0cg0=
-		</data>
-		<key>www/images/globe_imgs/logo.jpg</key>
-		<data>
-		TztTbWZF7Yo7ID+EFixp1x554Vg=
-		</data>
-		<key>www/images/globe_imgs/name_bg.png</key>
-		<data>
-		+GWjuU3eKP7s2z8Jl9uSNq0EWTA=
-		</data>
-		<key>www/images/globe_imgs/newyork.png</key>
-		<data>
-		PHxAvbX6bvgKu9RiycPX/XbwiGY=
-		</data>
-		<key>www/images/globe_imgs/newyorkRoll.png</key>
-		<data>
-		LhBg8+9WEfYwa7R45FHPBfKeHgI=
-		</data>
-		<key>www/images/globe_imgs/right_arrow.png</key>
-		<data>
-		ONvCdYFv+ryAkn+bFJBGa03cgko=
-		</data>
-		<key>www/images/globe_imgs/universal.png</key>
-		<data>
-		qj5eKjWgYOcD+i02kIUIZ+Woiks=
-		</data>
-		<key>www/images/globe_imgs/universalRoll.png</key>
-		<data>
-		M+ATAfoeghUxhWGbMMV8ks0UEk0=
-		</data>
 		<key>www/images/maps/currentloactionIcon.png</key>
 		<data>
 		D5U5W4+L35+aL5Xl2FYNS7RuYD8=
@@ -1570,7 +1478,7 @@
 		</data>
 		<key>www/js/db/dBHelper.js</key>
 		<data>
-		etXlsMxsQ4JduR0CR26xl6W2B/A=
+		yZC90k6GFla7eNFrY7E0lZlAYGw=
 		</data>
 		<key>www/js/lib/ChildBrowser.js</key>
 		<data>
@@ -1642,11 +1550,15 @@
 		</data>
 		<key>www/js/service/appUpdate.js</key>
 		<data>
-		mlf6Ft/D6rayG9OTGdlQRIlnRl4=
+		P8p37C3Q1wXEt7Fu7dHkNVhJmKE=
 		</data>
 		<key>www/js/service/backlot.js</key>
 		<data>
-		uDesRoIAXN7pvC4WtnPVIyDuM30=
+		fcId03GeR+dVUKiG9rQUGq2kJf4=
+		</data>
+		<key>www/js/service/constants.js</key>
+		<data>
+		JFnDAkCG0s0Drg2XtwEw4DCuu/4=
 		</data>
 		<key>www/js/service/directoryServices.js</key>
 		<data>
@@ -1666,35 +1578,15 @@
 		</data>
 		<key>www/js/service/routeMap.js</key>
 		<data>
-		pEgWT7wadlm0F0aD2Wqa+YvFxl8=
+		VhHaKOGvWEz87RvJz54KMBUkuYA=
 		</data>
 		<key>www/js/service/stages.js</key>
 		<data>
-		IwCfZsfXHsxPTzuZpFDXAf7lV7I=
+		ZE4wLFpLGVvXq/edTmdZP3JmVxo=
 		</data>
 		<key>www/js/ui/footer.js</key>
 		<data>
-		fawvLAj+CTJGVlwXq3lpOOz1Vy0=
-		</data>
-		<key>www/js/ui/globe_js/MIT-LICENSE.txt</key>
-		<data>
-		SGIjkjsjrGYkJqwlqcOdkOyhPbg=
-		</data>
-		<key>www/js/ui/globe_js/README.md</key>
-		<data>
-		mXRhxsxqno0T76Fc78MfN1QE/Mo=
-		</data>
-		<key>www/js/ui/globe_js/demo.js</key>
-		<data>
-		aByWe38DUJHna+9fg+keTEIEkPQ=
-		</data>
-		<key>www/js/ui/globe_js/jquery.earth-3d.js</key>
-		<data>
-		iLLYNibqRg4mUsFkymUvH01aBw0=
-		</data>
-		<key>www/js/ui/globe_js/sphere-hacked.js</key>
-		<data>
-		ByPxDoGxdp8yU+a7Gk+8OCtZoi4=
+		uNx8bWCMVCZKFECdP+VJQcw5Auk=
 		</data>
 		<key>www/js/ui/imagepanner.js</key>
 		<data>
@@ -1710,7 +1602,7 @@
 		</data>
 		<key>www/js/ui/routemapPopup.js</key>
 		<data>
-		PB+erdDR3eIZL/CelHSMja6WNsY=
+		cJqWs8evvXbLQboXdW1vIJl0syI=
 		</data>
 		<key>www/js/ui/stagesNYChicagoPopup.js</key>
 		<data>
@@ -1727,18 +1619,6 @@
 		<key>www/plugins/jquery/jquery-1.7.2.min.js</key>
 		<data>
 		q80roTNI8XixcUG0RbyZ8ZF9R68=
-		</data>
-		<key>www/plugins/sphere/MIT-LICENSE.txt</key>
-		<data>
-		uz0AhZL3IdcV9NsqlE4f7Y9osjA=
-		</data>
-		<key>www/plugins/sphere/requestanimationframe.polyfill.js</key>
-		<data>
-		+T0eNtPuwiYbfV9jWdYBhcadprA=
-		</data>
-		<key>www/plugins/sphere/requestanimationframe.polyfill.js.bak</key>
-		<data>
-		36G9BM5oT24yTZKKSXM1jUdNSb8=
 		</data>
 	</dict>
 	<key>rules</key>

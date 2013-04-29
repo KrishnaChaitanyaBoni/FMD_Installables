@@ -10,7 +10,7 @@ android: ua.match(/Android/)
 
 
 var mailSubject="Snapshot from NBCU Studio Mobile App";
-var mailBody ='NBCU Studio app is available for free download from '+ '<a href="https://itunes.apple.com ">App Store</a>'+ ' & ' +'<a href="https://play.google.com/store/apps/details?id=com.nbcu.nbcustudio">Play Store</a>';
+var mailBody ='NBCU Studio app is available for free download from '+ '<a href='+ITUNES_URL+'>App Store</a>'+ ' & ' +'<a href='+GOOGLE_PLAY_URL+'>Play Store</a>';
 var toEMail = "";
 
 function aboutUsFooter(){
@@ -19,7 +19,7 @@ function aboutUsFooter(){
 		document.write('<footer class="bottomGradient"><nav style="position:relative;"><div class="facilityHome"><a  onclick="getCurrentLandingPage()">Facility Home</a></div><div class="share" onclick="captureScreenshot();"><a>Send</a></div><div class="directory"><a onclick="loadDirectory();">Directory</a></div><div class="map" onclick="openMap();"><a >Map</a></div><div class="aboutus"><a href="aboutus.html">About Us</a></div><div class="privacy"><a  onClick="showPolicy()">Privacy Policy</a></div><div class="website"><a onclick="loadURL();">Website</a></div><div class="drive" onclick="openLot();"><a href ="#">Before you<br>get here</a></div><div class="idea"><a href ="mailto: studio.operations2@nbcuni.com">Have an idea?</a></div><div class="more" ><a>More</a></div><section class="moreTooltip"><section class="moreTooltipinner"><section class="moreTooltipiconcover"><section class="Tooltipicon popidea"><a href ="mailto: studio.operations2@nbcuni.com"><br>Have an idea?</a></section><section class="Tooltipicon popDrive" onclick="openLot();"><a href ="#"><br>Before you<br>get here</a></section><section class="Tooltipicontop popWebsite" ><a onclick="loadURL();"><br>Website</a></section><section class="Tooltipicontop popPrivacy" ><a  onClick="showPolicy()"><br>Privacy Policy</a></section><section class="Tooltipicon popAboutus"><a href="aboutus.html"><br>About Us</a></section></section><section class="dwnssArrrow"></section></section></section><section class="sendTooltip"><section class="moreTooltipinner"><section class="moreTooltipiconcover"><section class="sendtipicon popSMS" onclick="sendSMS();"><a ><br>SMS</a></section><section class="sendtipicon popMail" onclick="takeScreenShot(mailSubject,mailBody,true,toEMail);"><a ><br>Email</a></section></section><section class="dwnssArrrow"></section></section></section></nav></footer>')
 	}
 	else  {
-		var smsTxt="Universal Studios General Contact , Email:studio.operations@nbcuni.com ,  Phone: 1.800.892.1979 %0A Chicago General Contact , Email:trisha.hockings@nbcuni.com ,  Phone: 1.312.836.5800 %0A New York General Contact , Email:marybeth.scalici@nbcuni.com ,  Phone: 1.212.664.2013";
+		 var smsTxt="Universal Studios General Contact , Email:studio.operations@nbcuni.com ,  Phone: 1.800.892.1979 %0A Chicago General Contact , Email:trisha.hockings@nbcuni.com ,  Phone: 1.312.836.5800 %0A New York General Contact , Email:marybeth.scalici@nbcuni.com ,  Phone: 1.212.664.2013";
 
 		 document.write('<footer class="bottomGradient"><nav style="position:relative;"><div class="facilityHome"><a  onclick="getCurrentLandingPage()">Facility Home</a></div><div class="share" onclick="captureScreenshot();"><a>Send</a></div><div class="directory"><a onclick="loadDirectory();">Directory</a></div><div class="map" onclick="openMap();" ><a >Map</a></div><div class="aboutus"><a href="aboutus.html">About Us</a></div><div class="privacy"><a  onClick="showPolicy()">Privacy Policy</a></div><div class="website"><a onclick="loadURL();">Website</a></div><div class="drive" onclick="openLot();"><a href ="#">Before you<br>get here</a></div><div class="idea"><a href ="mailto: studio.operations2@nbcuni.com">Have an idea?</a></div><div class="more" ><a>More</a></div><section class="moreTooltip"><section class="moreTooltipinner"><section class="moreTooltipiconcover"><section class="Tooltipicon popidea"><a href ="mailto: studio.operations2@nbcuni.com"><br>Have an idea?</a></section><section class="Tooltipicon popDrive" onclick="openLot();"><a href ="#"><br>Before you<br>get here</a></section><section class="Tooltipicontop popWebsite" ><a onclick="loadURL();"><br>Website</a></section><section class="Tooltipicontop popPrivacy" ><a  onClick="showPolicy()"><br>Privacy Policy</a></section><section class="Tooltipicon popAboutus"><a href="aboutus.html"><br>About Us</a></section></section><section class="dwnssArrrow"></section></section></section><section class="sendTooltip"><section class="moreTooltipinner"><section class="moreTooltipiconcover"><section class="sendtipicon popSMS" ><a href="sms:?body='+smsTxt+'"><br>SMS</a></section><section class="sendtipicon popMail" onclick="takeScreenShot(mailSubject,mailBody,true,toEMail);"><a ><br>Email</a></section></section><section class="dwnssArrrow"></section></section></section></nav></footer>')
 			 
@@ -80,9 +80,9 @@ function showCommissaryMenu(){
 	if(connectionAvailable !=="false"){
 	if (platform.android)
     {
-		window.plugins.childBrowser.openExternal("http://universal.filmmakersdestination.com/home/working-on-the-lot/dining-services/commissary-weekly-specials/");
+		window.plugins.childBrowser.openExternal(COMMISSARY_MENU_URL);
     }else{
-	     window.plugins.childBrowserIOS.showWebPage("http://universal.filmmakersdestination.com/home/working-on-the-lot/dining-services/commissary-weekly-specials/");
+	     window.plugins.childBrowserIOS.showWebPage(COMMISSARY_MENU_URL);
     }
     }
 }
@@ -92,10 +92,10 @@ function loadURL(){
      if(connectionAvailable !=="false"){
     if (platform.android)
     {
-        window.plugins.childBrowser.openExternal("http://www.filmmakersdestination.com");
+        window.plugins.childBrowser.openExternal(WEBSITE_URL);
     }
     else{
-        window.open("http://www.filmmakersdestination.com");	
+        window.open(WEBSITE_URL);	
     }
     return false;
 } 
@@ -189,9 +189,9 @@ function showPolicy(){
     if(connectionAvailable !=="false"){
 	if (platform.android)
     {
-		window.plugins.childBrowser.openExternal("http://www.filmmakersdestination.com/privacy-policy/");
+		window.plugins.childBrowser.openExternal(PRIVACY_POLICY_URL);
     }else{
-	     window.plugins.childBrowserIOS.showWebPage("http://www.filmmakersdestination.com/privacy-policy/");
+	     window.plugins.childBrowserIOS.showWebPage(PRIVACY_POLICY_URL);
     }
      }
 }
@@ -209,11 +209,11 @@ function showVirtualTour(){
 
 	    if (platform.android)
 	     {
-	     window.plugins.childBrowser.openExternal("http://universal.filmmakersdestination.com/site-content/themes/master_theme/virtual_tour/universal_backlot.html");
+	     window.plugins.childBrowser.openExternal(VIRTUAL_TOUR_URL);
 	     }
 	    else
 	     {
-	     window.plugins.childBrowserIOS.showWebPage("http://universal.filmmakersdestination.com/site-content/themes/master_theme/virtual_tour/universal_backlot.html");
+	     window.plugins.childBrowserIOS.showWebPage(VIRTUAL_TOUR_URL);
 	     }
 	 
 	}
@@ -326,7 +326,7 @@ function getPlatform(){
     
 function emailScreenshot(){
 	captureScreenshot();
-    mailBody ='NBCU Studio app is available for free download from '+ '<a href="https://itunes.apple.com ">App Store</a>'+ ' & ' +'<a href="https://play.google.com/store/apps/details?id=com.nbcu.nbcustudio">Play Store</a>';
+    mailBody ='NBCU Studio app is available for free download from '+ '<a href='+ITUNES_URL+'>App Store</a>'+ ' & ' +'<a href='+GOOGLE_PLAY_URL+'>Play Store</a>';
 	takeScreenShot(mailSubject,mailBody,true,"");
 }
 

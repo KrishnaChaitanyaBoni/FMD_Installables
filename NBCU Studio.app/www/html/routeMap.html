@@ -1,300 +1,335 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
-<title>Universal Studios - RouteMap</title>
-    <link href="../css/filmSet/backlotStyle.css" rel="stylesheet" type="text/css" />
-    <link href="../css/common/common.css" rel="stylesheet" type="text/css" />
-    <link href="../css/common/gradients.css" rel="stylesheet" type="text/css" />
-    <link href="../css/animate/animate.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../js/lib/cordova-1.9.0.js"></script>
-<script type="text/javascript" src="../js/lib/ChildBrowser.js"></script>
-<script type="text/javascript" src="../js/lib/ChildBrowser_android.js"></script>
-<script src="../js/db/dBHelper.js"></script>
-<script src="../js/lib/jquery-1.9.1.min.js"></script>
-<script src="../js/ui/navigation.js"></script>
-<script src="../js/ui/footer.js"></script>
-
-<script src="../js/lib/jquery-1.8.3.js"></script>
-
-<script src="../js/lib/jquery-ui.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
-    <script src="http://www.google.com/jsapi" language="javascript"></script>
-<script src="../js/lib/marker.js"></script>
-<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"> </script>
-<script src="../js/service/maps.js"></script>
-
-<script src="../js/service/routeMap.js"></script>
-<script src="../js/lib/SMSComposer.js"></script>
-<script src="../js/lib/EmailComposer.js"></script>
-<script src="../js/lib/Screenshot.js"></script>   
-
-<script type="text/javascript" src="../js/lib/jquery-ui.min.js"></script>
-<script type="text/javascript" src="../js/lib/jquery.slimscroll.js"></script>
-    <script>
-        $(function(){
-          document.addEventListener("deviceready", onDeviceReady, false);
-          })
-        
-        function onDeviceReady() {
-            var connectionAvailable=true;
-            
-            var networkState = navigator.network.connection.type;
-            var states = {};
-            states[Connection.UNKNOWN]  = 'Unknown connection';
-            states[Connection.ETHERNET] = 'Ethernet connection';
-            states[Connection.WIFI]     = 'WiFi connection';
-            states[Connection.CELL_2G]  = 'Cell 2G connection';
-            states[Connection.CELL_3G]  = 'Cell 3G connection';
-            states[Connection.CELL_4G]  = 'Cell 4G connection';
-            states[Connection.NONE]     = 'No network connection';
-            
-            if(states[networkState] == "Unknown connection" || states[networkState] == "No network connection")
-            {
-                connectionAvailable = 'false';
-                navigator.notification.alert(
-                                             'Please check your network connection and try again.',  // message
-                                             {},         // callback
-                                             'Network',    // title
-                                             'OK'      // Close button Name
-                                             );
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+		<title>Universal Studios - RouteMap</title>
+		<link href="../css/filmSet/backlotStyle.css" rel="stylesheet" type="text/css" />
+		<link href="../css/common/common.css" rel="stylesheet" type="text/css" />
+		<link href="../css/common/gradients.css" rel="stylesheet" type="text/css" />
+		<link href="../css/animate/animate.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="../js/lib/cordova-1.9.0.js"></script>
+		<script type="text/javascript" src="../js/lib/ChildBrowser.js"></script>
+		<script type="text/javascript" src="../js/lib/ChildBrowser_android.js"></script>
+		<script src="../js/service/constants.js"></script>
+		<script src="../js/db/dBHelper.js"></script>
+		<script src="../js/lib/jquery-1.9.1.min.js"></script>
+		<script src="../js/ui/navigation.js"></script>
+		<script src="../js/ui/footer.js"></script>
+		<script src="../js/lib/jquery-1.8.3.js"></script>
+		<script src="../js/lib/jquery-ui.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+		<script src="http://www.google.com/jsapi" language="javascript"></script>
+		<script src="../js/lib/marker.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+		<script src="../js/service/maps.js"></script>
+		<script src="../js/service/routeMap.js"></script>
+		<script src="../js/lib/SMSComposer.js"></script>
+		<script src="../js/lib/EmailComposer.js"></script>
+		<script src="../js/lib/Screenshot.js"></script>
+		<script type="text/javascript" src="../js/lib/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../js/lib/jquery.slimscroll.js"></script>
+		<script>
+			$(function() {
+              document.addEventListener("deviceready", onDeviceReady, false);
+              })
+			function onDeviceReady() {
+				var connectionAvailable = true;
                 
-            }
-            
-            if(connectionAvailable !=="false"){
-
-                navigator.notification.confirm(
-                                         'NBCU Studio would like to use your current location',  // message
-                                         onConfirm,         // callback
-                                         'Permission Request',    // title
-                                         'Do not Allow,Allow'      // Close button Name
-                                         );
-            }
-
-            
-        }
-        
-        function onSuccess(position) {
-            showLocation(position); 
-        }
-        
-        
-        function onError(error) { 
-            navigator.notification.alert('This app needs your permission to access your location. Please activate it in Location services under Settings.',{},'Permission Request','Done');
-        }
-
-     function onConfirm(button){
-            if(button == 2)
-            {
-                sessionStorage.isGeoLocationAllowed="YES";
-                navigator.geolocation.getCurrentPosition(onSuccess, onError);
-            }
-            else
-            {
-                sessionStorage.isGeoLocationAllowed="NO";
-                navigator.notification.alert("Route cannot be found without accessing your current location.",{},"Permission Denied","OK");
-            }
-      }
-        
-        </script>
-
-
-
- <script>
-$(document).ready(function(){
-	getPlatform();
-    $(".mapSlider").hide();
-	$("footer nav .map a").addClass("mapHover");
-
-var hSelect = $(".selectSlider").height();
-var aSelect = hSelect/2;
-var wSelect = $(window).height() / 2;
-var tSelect = wSelect - aSelect + 10;
-$(".mapSlider").css("right","-246px");
-$(".mapSlider").css("top", tSelect);
-
-
-
-$(".mapIcn, .mapSlider .close, .mapSlider .listName").click(function(){
-                                                            $(".mapSlider").show();
-	
-var hMap = $(".mapSlider").height();
-var aMap = hMap/2;
-var wMap = $(window).height() / 2;
-var tMap = wMap - aMap + 10;
-var rMap = $(".mapSlider").css("right");
-
-if(rMap + "px" < 0 + "px")
-{		
-$(".mapSlider").css("top", tMap);	
-$(".mapSlider").animate({right:"0px"});
-$(".selectSlider").animate({left:"-246px"},function(){$(".mapSlider").hide();});
-}
-else
-{
-$(".mapSlider").animate({right:"-246px"},function(){$(".mapSlider").hide();});
-}
-});
-$("footer nav .facilityHome a, footer nav .directory a, footer nav .map a, footer nav .idea a, footer nav .share a, footer nav .more a, footer nav .aboutus a, footer nav .privacy a, footer nav .website a, footer, header, body").click(function(){ 
-	var rMap = $(".mapSlider").css("right");
-	if(rMap == 0 + "px"){$(".mapSlider").animate({right:"-246px"});}
-	});
-                  $(".backlotBackV2").bind('touchstart', function(){
-                                           $(".backlotBackV2").addClass("backlotBackV2Roll");setTimeout(function () {$(".backlotBackV2").removeClass("backlotBackV2Roll")},200);
-                                           });
-                  
-                  $(".backlotHeadericonV2").bind('touchstart', function(){
-                                                 $(".backlotHeadericonV2").addClass("backlotHeadericonV2Roll");setTimeout(function () {$(".backlotHeadericonV2").removeClass("backlotHeadericonV2Roll")},200);
-                                                 });
-                  $(".mapHelp img").bind('touchstart', function(){
-                                         $('.mapHelp img').attr('src','../images/maps/roll/help.png');
-                                         setTimeout(function () {$('.mapHelp img').attr('src','../images/maps/help.png');},200);
-                                         });
-                  $(".mapLocation img").bind('touchstart', function(){
-                                         $('.mapLocation img').attr('src','../images/maps/roll/mapClose.png');
-                                         setTimeout(function () {$('.mapLocation img').attr('src','../images/maps/mapClose.png');},200);
-                                         });
-                  $(".mapDirection img").bind('touchstart', function(){
-                                             $('.mapDirection img').attr('src','../images/maps/roll/directionIcon.png');
-                                             setTimeout(function () {$('.mapDirection img').attr('src','../images/maps/directionIcon.png');},200);
-                                             });
-                    $(".mapRefresh img").bind('touchstart', function(){
-                        $('.mapRefresh img').attr('src','../images/maps/roll/refreshIcon.png');
-                    setTimeout(function () {$('.mapRefresh img').attr('src','../images/maps/refreshIcon.png');},200);
-                     });
-});
-</script>
-    
-<script src="../js/ui/routemapPopup.js"></script>
-</head>
-<body>
-<!--Header section-->
-    <header class="uniTXTColor">
-        <div class="headergradiant headerInnerCover">
-            
-            <div id="headerBackHideDiv" class="headerBackHide"></div>
-            <div  id="backButtonDiv" class="headerBack backlotBackV2" onclick="javascript:history.back()"></div> 
-            
-            <span class="headings">Universal Studios</span>
-            <div class="headerIcon"><a class="backlotHeadericonV2" ></a></div>
-        </div>
-        <div class="trvGameHDgradient font16B subheadings" style="position:relative;">
-            <span>Route Map</span>
-            <div class="mapHelp"><img class="mapIcn" src="../images/maps/help.png"/></div>
-            <div class="mapLocation"><a href="javascript:history.back()"><img src="../images/maps/mapClose.png"/></a></div>
-            <div class="mapDirection"><a  class="mapDir" rel="#RoutePOP"><img src="../images/maps/directionIcon.png"/></a></div>
-            <div class="mapRefresh"><a><img src="../images/maps/refreshIcon.png" onclick="refreshPage()"/></a></div>
-        </div>
-        <!--Header nav popup-->
-        <div class="homeNav">
-            <div class="homeNavinner">
-                <div class="homeNavArrow"><img src="../images/common/homeNavArrow.png"/></div>
-                <div class="homeNavChicago" >Chicago</div>
-                <div class="homeNavNewyork" >New York</div>
-            </div>
-        </div>
-        <!--Header nav popup end-->
-    </header>
-<!--Header section end-->
-<!--wrapper section--->
-    <div id="wrapper" class="trvwrapperTop UniWrapperBG">
-        <div class="mapWrapperInner" id="routeMap scrollDiv" style="position:relative;">
-            
-            <div class="countryLabel">
-                <div class="labelrouteAcover">
-                    <div class="labelrouteA">A</div>
-                <div class="labelrouteAdesc">You are Here</div>
-                                     <div class="labelroutedescAlpha"></div>
-                </div>
+				var networkState = navigator.network.connection.type;
+				var states = {};
+				states[Connection.UNKNOWN] = 'Unknown connection';
+				states[Connection.ETHERNET] = 'Ethernet connection';
+				states[Connection.WIFI] = 'WiFi connection';
+				states[Connection.CELL_2G] = 'Cell 2G connection';
+				states[Connection.CELL_3G] = 'Cell 3G connection';
+				states[Connection.CELL_4G] = 'Cell 4G connection';
+				states[Connection.NONE] = 'No network connection';
                 
-                <div class="labelrouteBcover">
-                    <div  class="labelrouteB">B</div>
-                    <div class="labelrouteBdesc" id="dest_name">
-                        <script language="javascript">getDestinationServiceName()</script>
-                    </div>
-                    <div class="labelArrowlist labelArrowimg"></div>
-                    <div class="labelDropDown"><div id="scrollDiv3"><div id="scrollDest"><script language="javascript">getDestinationServiceName()</script></div></div></div>
-                     <div class="labelroutedescAlpha"></div>
-              
-                    </div>              
+				if(states[networkState] == "Unknown connection" || states[networkState] == "No network connection") {
+					connectionAvailable = 'false';
+					navigator.notification.alert('Please check your network connection and try again.', // message
+                                                 {
+                                                 }, // callback
+                                                 'Network', // title
+                                                 'OK'      // Close button Name
+                                                 );
+                    
+				}
                 
-            </div>
-            <!--Map area--->
-            <div class="mapContainer" id="mapRoute">
-                <script language="javascript">//getMyLocation()</script>
+				if(connectionAvailable !== "false") {
+                    
+					navigator.notification.confirm('NBCU Studio would like to use your current location', // message
+                                                   onConfirm, // callback
+                                                   'Permission Request', // title
+                                                   'Do not Allow,Allow'      // Close button Name
+                                                   );
+				}
                 
-            </div>
-            <!--Map end--->
-        </div>
-    </div>
-    <div id="pop">
-        <a class="close"></a>
-        <div id="cont" style="background:#FFF; overflow:hidden;"></div>
-    </div>
-    
-    <div class="RoutemappopHide">
-        <div id="RoutePOP">
-            <div class="dirListHead" ><div class="dirListHeadTitle">Direction list</div><div class="dirListHeadIcon" onclick="emailWithLink();"><img src="../images/universal/stageEmail.png"/></div></div>
+			}
             
-            <div class="routelistCntCover" style="overflow:auto;-webkit-overflow-scrolling: touch;">
-            <div id="routelistCnts">
-            </div>    
-                
-                <div class="popLabelPart2"><b> Destination :</b><div  id="bname" class = "popLabelBDesc"><span><script language="javascript">getDestinationServiceName()</script></span></div></div>
-            </div>
+			function onSuccess(position) {
+				showLocation(position);
+			}
             
+			function onError(error) {
+				navigator.notification.alert('This app needs your permission to access your location. Please activate it in Location services under Settings.', {}, 'Permission Request', 'Done');
+			}
             
-          </div>
-        
-    </div> 
-    
-      <div class = "mapSlider">    
-    <div class = "close"></div>
-    <div class = "mapSliderinner">
-    <div id="scrollDiv2">
-    <div style="clear:both;">
-	<div style="width:25px;padding:4px;border-radius:6px 0 0 6px;float:left;background:#323232;">
-    <img src="../images/maps/directionIcon.png">
-    </div>
-    <div  style="width:170px;padding:4px;margin:0 0 10px 0;min-height:50px;border-radius:0 6px 6px 6px;float:left;background:#212121;">View Direction List helps to identify the exact route directions to traverse from the current location to the desired location.</div>
-    </div>
-    
-    
-    <div style="clear:both;">
-	<div style="width:25px;padding:4px;border-radius:6px 0 0 6px;float:left;background:#323232;">
-    <img src="../images/maps/help.png">
-    </div>
-    <div  style="width:170px;padding:4px;margin:0 0 10px 0;min-height:50px;border-radius:0 6px 6px 6px;float:left;background:#212121;">Help guides you to use the maps.</div>
-    </div>
-    
-   
-    <div style="clear:both;">
-	<div style="width:25px;padding:4px;border-radius:6px 0 0 6px;float:left;background:#323232;">
-    <img src="../images/maps/mapClose.png">
-    </div>
-    <div  style="width:170px;padding:4px;margin:0 0 10px 0;min-height:50px;border-radius:0 6px 6px 6px;float:left;background:#212121;">Close map helps to close the map and returns you to the previously accessed page on the application.</div>
-    </div>
-    
-    <div style="clear:both;">
-	<div style="width:25px;padding:4px;border-radius:6px 0 0 6px;float:left;background:#323232;">
-    <img src="../images/maps/refreshIcon.png">
-    </div>
-    <div  style="width:170px;padding:4px;margin:0 0 10px 0;min-height:50px;border-radius:0 6px 6px 6px;float:left;background:#212121;">Refreshes the route based on your current location.</div>
-    </div>
-    
-    <div style="clear:both;">
-	<div style="width:25px;padding:4px;border-radius:6px 0 0 6px;float:left;background:#323232;">
-    <img src="../images/maps/pegman.png">
-    </div>
-    <div  style="width:170px;padding:4px;min-height:50px;border-radius:0 6px 6px 6px;float:left;background:#212121;">Pegman for Street View needs to be dragged and dropped on the route to view the street view. If the Pegman stays Amber, then the street view would be available else if he turns Grey the street view would not be available.</div>
-    </div>
-    </div>
-    </div>
-    </div>
-    
-    <!--footer section-->
-    <script language="javascript">loadMailDisabledFooter()</script>
-    <!--footer section end-->
-    
-</body>
+			function onConfirm(button) {
+				if(button == 2) {
+					sessionStorage.isGeoLocationAllowed = "YES";
+					navigator.geolocation.getCurrentPosition(onSuccess, onError);
+				} else {
+					sessionStorage.isGeoLocationAllowed = "NO";
+					navigator.notification.alert("Route cannot be found without accessing your current location.", {}, "Permission Denied", "OK");
+				}
+			}
+            </script>
+		<script>
+			$(document).ready(function() {
+                              getPlatform();
+                              $(".mapSlider").hide();
+                              $("footer nav .map a").addClass("mapHover");
+                              
+                              var hSelect = $(".selectSlider").height();
+                              var aSelect = hSelect / 2;
+                              var wSelect = $(window).height() / 2;
+                              var tSelect = wSelect - aSelect + 10;
+                              $(".mapSlider").css("right", "-246px");
+                              $(".mapSlider").css("top", tSelect);
+                              
+                              $(".mapIcn, .mapSlider .close, .mapSlider .listName").click(function() {
+                                                                                          $(".mapSlider").show();
+                                                                                          
+                                                                                          var hMap = $(".mapSlider").height();
+                                                                                          var aMap = hMap / 2;
+                                                                                          var wMap = $(window).height() / 2;
+                                                                                          var tMap = wMap - aMap + 10;
+                                                                                          var rMap = $(".mapSlider").css("right");
+                                                                                          
+                                                                                          if(rMap + "px" < 0 + "px") {
+                                                                                          $(".mapSlider").css("top", tMap);
+                                                                                          $(".mapSlider").animate({
+                                                                                                                  right : "0px"
+                                                                                                                  });
+                                                                                          $(".selectSlider").animate({
+                                                                                                                     left : "-246px"
+                                                                                                                     }, function() {
+                                                                                                                     $(".mapSlider").hide();
+                                                                                                                     });
+                                                                                          } else {
+                                                                                          $(".mapSlider").animate({
+                                                                                                                  right : "-246px"
+                                                                                                                  }, function() {
+                                                                                                                  $(".mapSlider").hide();
+                                                                                                                  });
+                                                                                          }
+                                                                                          });
+                              $("footer nav .facilityHome a, footer nav .directory a, footer nav .map a, footer nav .idea a, footer nav .share a, footer nav .more a, footer nav .aboutus a, footer nav .privacy a, footer nav .website a, footer, header, body").click(function() {
+                                                                                                                                                                                                                                                                        var rMap = $(".mapSlider").css("right");
+                                                                                                                                                                                                                                                                        if(rMap == 0 + "px") {
+                                                                                                                                                                                                                                                                        $(".mapSlider").animate({
+                                                                                                                                                                                                                                                                                                right : "-246px"
+                                                                                                                                                                                                                                                                                                });
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        });
+                              $(".backlotBackV2").bind('touchstart', function() {
+                                                       $(".backlotBackV2").addClass("backlotBackV2Roll");
+                                                       setTimeout(function() {
+                                                                  $(".backlotBackV2").removeClass("backlotBackV2Roll")
+                                                                  }, 200);
+                                                       });
+                              
+                              $(".backlotHeadericonV2").bind('touchstart', function() {
+                                                             $(".backlotHeadericonV2").addClass("backlotHeadericonV2Roll");
+                                                             setTimeout(function() {
+                                                                        $(".backlotHeadericonV2").removeClass("backlotHeadericonV2Roll")
+                                                                        }, 200);
+                                                             });
+                              $(".mapHelp img").bind('touchstart', function() {
+                                                     $('.mapHelp img').attr('src', '../images/maps/roll/help.png');
+                                                     setTimeout(function() {
+                                                                $('.mapHelp img').attr('src', '../images/maps/help.png');
+                                                                }, 200);
+                                                     });
+                              $(".mapLocation img").bind('touchstart', function() {
+                                                         $('.mapLocation img').attr('src', '../images/maps/roll/mapClose.png');
+                                                         setTimeout(function() {
+                                                                    $('.mapLocation img').attr('src', '../images/maps/mapClose.png');
+                                                                    }, 200);
+                                                         });
+                              $(".mapDirection img").bind('touchstart', function() {
+                                                          $('.mapDirection img').attr('src', '../images/maps/roll/directionIcon.png');
+                                                          setTimeout(function() {
+                                                                     $('.mapDirection img').attr('src', '../images/maps/directionIcon.png');
+                                                                     }, 200);
+                                                          });
+                              $(".mapRefresh img").bind('touchstart', function() {
+                                                        $('.mapRefresh img').attr('src', '../images/maps/roll/refreshIcon.png');
+                                                        setTimeout(function() {
+                                                                   $('.mapRefresh img').attr('src', '../images/maps/refreshIcon.png');
+                                                                   }, 200);
+                                                        });
+                              });
+            
+            </script>
+		<script src="../js/ui/routemapPopup.js"></script>
+	</head>
+	<body>
+		<!--Header section-->
+		<header class="uniTXTColor">
+			<div class="headergradiant headerInnerCover">
+				<div id="headerBackHideDiv" class="headerBackHide"></div>
+				<div  id="backButtonDiv" class="headerBack backlotBackV2" onclick="javascript:history.back()"></div>
+				<span class="headings">Universal Studios</span>
+				<div class="headerIcon">
+					<a class="backlotHeadericonV2" ></a>
+				</div>
+			</div>
+			<div class="trvGameHDgradient font16B subheadings" style="position:relative;">
+				<span>Route Map</span>
+				<div class="mapHelp"><img class="mapIcn" src="../images/maps/help.png"/>
+				</div>
+				<div class="mapLocation">
+					<a href="javascript:history.back()"><img src="../images/maps/mapClose.png"/></a>
+				</div>
+				<div class="mapDirection">
+					<a  class="mapDir" rel="#RoutePOP"><img src="../images/maps/directionIcon.png"/></a>
+				</div>
+				<div class="mapRefresh">
+					<a><img src="../images/maps/refreshIcon.png" onclick="refreshPage()"/></a>
+				</div>
+			</div>
+			<!--Header nav popup-->
+			<div class="homeNav">
+				<div class="homeNavinner">
+					<div class="homeNavArrow"><img src="../images/common/homeNavArrow.png"/>
+					</div>
+					<div class="homeNavChicago" >
+						Chicago
+					</div>
+					<div class="homeNavNewyork" >
+						New York
+					</div>
+				</div>
+			</div>
+			<!--Header nav popup end-->
+		</header>
+		<!--Header section end-->
+		<!--wrapper section--->
+		<div id="wrapper" class="trvwrapperTop UniWrapperBG">
+			<div class="mapWrapperInner" id="routeMap scrollDiv" style="position:relative;">
+				<div class="countryLabel">
+					<div class="labelrouteAcover">
+						<div class="labelrouteA">
+							A
+						</div>
+						<div class="labelrouteAdesc">
+							You are Here
+						</div>
+						<div class="labelroutedescAlpha"></div>
+					</div>
+					<div class="labelrouteBcover">
+						<div  class="labelrouteB">
+							B
+						</div>
+						<div class="labelrouteBdesc" id="dest_name">
+							<script language="javascript">getDestinationServiceName()</script>
+						</div>
+						<div class="labelArrowlist labelArrowimg"></div>
+						<div class="labelDropDown">
+							<div id="scrollDiv3">
+								<div id="scrollDest">
+									<script language="javascript">getDestinationServiceName()</script>
+								</div>
+							</div>
+						</div>
+						<div class="labelroutedescAlpha"></div>
+					</div>
+				</div>
+				<!--Map area--->
+				<div class="mapContainer" id="mapRoute">
+					<script language="javascript">//getMyLocation()</script>
+				</div>
+				<!--Map end--->
+			</div>
+		</div>
+		<div id="pop">
+			<a class="close"></a>
+			<div id="cont" style="background:#FFF; overflow:hidden;"></div>
+		</div>
+		<div class="RoutemappopHide">
+			<div id="RoutePOP">
+				<div class="dirListHead" >
+					<div class="dirListHeadTitle">
+						Direction list
+					</div>
+					<div class="dirListHeadIcon" onclick="emailWithLink();"><img src="../images/universal/stageEmail.png"/>
+					</div>
+				</div>
+				<div class="routelistCntCover" style="overflow:auto;-webkit-overflow-scrolling: touch;">
+					<div id="scrollDiv6" style="padding:0 10px 0 0">
+						<div id="routelistCnts"></div>
+						<div class="popLabelPart2">
+							<b> Destination :</b>
+							<div  id="bname" class = "popLabelBDesc">
+								<span>
+									<script language="javascript">getDestinationServiceName()</script></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "mapSlider">
+			<div class = "close"></div>
+			<div class = "mapSliderinner">
+				<div id="scrollDiv2">
+					<div style="clear:both;">
+						<div style="width:25px;padding:4px;border-radius:6px 0 0 6px;float:left;background:#323232;">
+							<img src="../images/maps/directionIcon.png">
+                                </div>
+						<div  style="width:170px;padding:4px;margin:0 0 10px 0;min-height:50px;border-radius:0 6px 6px 6px;float:left;background:#212121;">
+							View Direction List helps to identify the exact route directions to traverse from the current location to the desired location.
+						</div>
+					</div>
+					<div style="clear:both;">
+						<div style="width:25px;padding:4px;border-radius:6px 0 0 6px;float:left;background:#323232;">
+							<img src="../images/maps/help.png">
+                                </div>
+						<div  style="width:170px;padding:4px;margin:0 0 10px 0;min-height:50px;border-radius:0 6px 6px 6px;float:left;background:#212121;">
+							Help guides you to use the maps.
+						</div>
+					</div>
+					<div style="clear:both;">
+						<div style="width:25px;padding:4px;border-radius:6px 0 0 6px;float:left;background:#323232;">
+							<img src="../images/maps/mapClose.png">
+                                </div>
+						<div  style="width:170px;padding:4px;margin:0 0 10px 0;min-height:50px;border-radius:0 6px 6px 6px;float:left;background:#212121;">
+							Close map helps to close the map and returns you to the previously accessed page on the application.
+						</div>
+					</div>
+					<div style="clear:both;">
+						<div style="width:25px;padding:4px;border-radius:6px 0 0 6px;float:left;background:#323232;">
+							<img src="../images/maps/refreshIcon.png">
+                                </div>
+						<div  style="width:170px;padding:4px;margin:0 0 10px 0;min-height:50px;border-radius:0 6px 6px 6px;float:left;background:#212121;">
+							Refreshes the route based on your current location.
+						</div>
+					</div>
+					<div style="clear:both;">
+						<div style="width:25px;padding:4px;border-radius:6px 0 0 6px;float:left;background:#323232;">
+							<img src="../images/maps/pegman.png">
+                                </div>
+						<div  style="width:170px;padding:4px;min-height:50px;border-radius:0 6px 6px 6px;float:left;background:#212121;">
+							Pegman for Street View needs to be dragged and dropped on the route to view the street view. If the Pegman stays Amber, then the street view would be available else if he turns Grey the street view would not be available.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--footer section-->
+		<script language="javascript">loadMailDisabledFooter()</script>
+		<!--footer section end-->
+	</body>
 </html>

@@ -11,6 +11,7 @@
         <script type="text/javascript" src="../js/lib/cordova-1.9.0.js"></script>
 <script type="text/javascript" src="../js/lib/ChildBrowser.js"></script>
 <script type="text/javascript" src="../js/lib/ChildBrowser_android.js"></script>
+        <script src="../js/service/constants.js"></script>
 
         <script src="../js/lib/jquery-1.9.1.min.js"></script>
         <script src="../js/ui/navigation.js"></script>
@@ -64,7 +65,7 @@
                        $("#widget").draggable();
                        $("#slider").slider({
                                            range: true,
-                                           values: [0, 10000],
+                                           values: [0, 30000],
                                            max: 30000,
                                            min: 0,
                                            slide: function(e, ui){

@@ -174,7 +174,7 @@ function errorHandler(transaction, error) {
 function bodyLoad(){
     if($(window).width()<600){
 		$("#val2").append(10000);
-		getStages(0,10000);
+		getStages(0,30000);
     }
     else{
 		$("#val2").append(30000);
