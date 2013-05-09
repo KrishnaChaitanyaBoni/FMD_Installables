@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+<title>Universal Studios - About Us</title>
+
+<link href="../css/common/common.css" rel="stylesheet" type="text/css" />
+<link href="../css/common/aboutStyle.css" rel="stylesheet" type="text/css" />
+<link href="../css/common/gradients.css" rel="stylesheet" type="text/css" />
+<link href="../css/animate/animate.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/lib/cordova-1.9.0.js"></script>
+
+<script src="../js/lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery.slimscroll.js"></script>
+<script type="text/javascript" src="../js/lib/ChildBrowser.js"></script>
+<script type="text/javascript" src="../js/lib/ChildBrowser_android.js"></script>
+<script src="../js/service/constants.js"></script>
+
+<script src="../js/lib/SMSComposer.js"></script>
+<script src="../js/lib/EmailComposer.js"></script>
+    
+<script src="../js/ui/navigation.js"></script>
+<script src="../js/ui/footer.js"></script>
+<script src="../js/lib/Screenshot.js"></script>
+    <script>$(document).ready(function(){ $("footer nav .aboutus a").addClass("aboutusHover");
+                              if(localStorage.getItem("CurPage")=="universalLanding.html"){
+                              $("#uni").hide();
+                              $("#chi").show();
+                              $("#new").show();
+                              }else if(localStorage.getItem("CurPage")=="chicagoLanding.html"){
+                              $("#uni").show();
+                              $("#chi").hide();
+                              $("#new").show();
+                              }
+                              else {
+                              $("#uni").show();
+                              $("#chi").show();
+                              $("#new").hide();
+                              }
+                              $(".dirBack").bind('touchstart click', function(){
+                                                 $(".dirBack").addClass("dirBackRoll");setTimeout(function () {$(".dirBack").removeClass("dirBackRoll")},200);
+                                                 });
+                              
+                              $(".dirHome").bind('touchstart click', function(){
+                                                 $(".dirHome").addClass("dirHomeRoll");setTimeout(function () {$(".dirHome").removeClass("dirHomeRoll")},200);
+                                                 });
+                              
+                              
+                              });
+</script>
+
+</head>
+
+<body onload="getPlatform();">
+<!--Header section-->
+    <header class="headergradiant">
+        <div class="headerInnerCover">
+            <div id="headerBackHideDiv" class="headerBackHide"></div>
+            <div id="backButtonDiv" class="headerBack dirBack" onclick="javascript:history.back();" ></div>
+            <span class="headings dirTitleColor">About Us</span>
+            <div class="headerIcon dirHome" ></div>
+            <div class="iconGap"></div>
+        </div>
+        <!--Header nav popup-->
+        <div class="homeNav">
+            <div class="homeNavinner">
+                <div class="homeNavArrow"><img src="../images/common/homeNavArrow.png"/></div>
+                <div id="uni" class="homeNavUniversal" >Universal Studios</div>
+                <div id="chi" class="homeNavChicago" >Chicago</div>
+                <div id="new" class="homeNavNewyork" >New York</div>
+            </div>
+        </div>
+        <!--Header nav popup end-->
+    </header>
+<!--Header section end-->
+
+<!--wrapper section--->
+<div id="wrapper" class="dirBckGrnd">
+<div class="wrapperinner">
+<div class="navcover320">
+	<div class="dirNav">
+   		<ul>
+    		<li><a onclick="setCurrentPageUniversal()" class="dirBtnGrnt_blue">Universal Studios</a></li>
+    		<li><a onclick="setCurrentPageChicago()" class="dirBtnGrnt_grey">NBC Chicago</a></li>
+    		<li><a onclick="setCurrentPageNewyork()" class="dirBtnGrnt_grey">NBC New York</a></li>
+    	</ul>
+    </div>
+</div>
+
+<!--Universal Studios Start-->
+<div class="abtWrapper">
+    <div class="abtCVR UniCA" >
+    <div id="scrollDiv1">
+        <div class="abtDropShadow">
+            <div class="aboutUscover">
+                <div class="abtDesc">100 Universal City Plaza, Universal City, CA 91608</div>
+                <div class="aboutCarousel abts1"></div>
+            </div>
+        </div>
+    	<div class="aboutUsCntcover">    		
+    		Universal's rich entertainment legacy can be traced back to 1906, when 39 year-old German immigrant Carl Laemmle (pronounced LEM-lee) opened his first nickelodeon theater in Chicago. From exhibiting short silent movies in one theater, Laemmle later moved to movie distribution and production. <br/>
+
+<br/>April 30, 1912, the Universal Film Manufacturing Company was incorporated in New York.<br>
+<br/>August 15, 1912, Universal officially expanded its operation to the West Coast when it leased a portion of the Providencia Ranch in the San Fernando Valley. <br/>
+
+<br/>On March 15, 1915 Carl Laemmle officially opened the gates of Universal City, the world's first self-contained community dedicated to making movies. <br/>
+
+<br/>Although the studio officially opened in 1915, film production on the lot began in 1914. Damon and Pythias, co-starring William Worthington and Herbert Rowlinson, was the first picture completed at Universal City.<br/>
+
+<br/>Laemmle also began inviting visitors to Universal City to observe his movie making, establishing Universal's long-standing tradition of welcoming guests to enjoy the behind-the-scenes magic.<br/>
+
+<br/>In 1936, Carl Laemmle retired from the movie industry, and sold Universal to Standard Capital Company.<br/>
+
+<br/>In 1950, Universal acquired 140 acres of land adjoining the southern boundary of the studio, increasing the overall size of Universal City to 400 acres.<br/>
+
+<br/>In December 1958, MCA, Inc. purchased the Universal City Studio lot. MCA's Revue Television Productions relocated to Universal City, and Universal Pictures then leased back its property from MCA. This arrangement lasted three years, until MCA and Universal officially merged in 1962.<br/>
+
+<br/>In May 2004, NBCUniversal was formed through the combining of NBC and Vivendi Universal Entertainment. NBCUniversal owns and operates a valuable portfolio of news and entertainment networks, a premier motion picture company, significant television production operations, a leading television stations group, and world-renowned theme parks. NBCUniversal became part of the Comcast family in January 2011.<br/>
+
+<br/>Today, Universal City continues to be one of the largest full-service production facilities. With 30 sound stages and a backlot that can replicate any location in the world, it is not only a filmmaker''s destination, but also the Entertainment Capital of Los Angeles.<br/>
+    	</div>
+   		</div>
+    </div>
+<!--Universal Studios End-->
+
+<!--NBC Chicago Start-->
+    <div class="abtCVR NBCchicago" >
+    <div id="scrollDiv2">
+    <div class="abtDropShadow">
+            <div class="aboutUscover">
+                <div class="abtDesc">454 N. Columbus Dr. Chicago, IL 60611</div>
+                <div class="aboutCarousel abts2"></div>
+            </div>
+        </div>
+    	<div class="aboutUsCntcover">
+        Located conveniently in the heart of downtown, NBC Chicago offers two sound stages that are ideal for still shoot, television, independent feature and commercial productions for internal and third party clients. At 10,234 sq. ft, Studio A fits single productions and is large enough to be divided between productions. At 4,087 sq ft., Studio B allows for more contained shoots and works well for talk show formats. The facility has well-appointed green rooms with make-up stations, an audience waiting room and production offices along with set design & carpentry, paint, electric and more.
+		</div>
+        </div>
+    </div>
+<!--NBC Chicago End-->
+
+<!--NBC New York Start-->
+    <div class="abtCVR NBCnewyork" >
+    <div id="scrollDiv3">
+        <div class="abtDropShadow">
+            <div class="aboutUscover">
+                <div class="abtDesc">30 Rockefeller Plaza New York, NY 10112-0002</div>
+                <div class="aboutCarousel abts3"></div>
+            </div>
+        </div>
+    	<div class="aboutUsCntcover">NBC New York offers world-class production and post production services and facilities available for feature films, television, independents, still photographers, commercials and new media productions as well as other related industries. Our facilities host cutting edge technologies and teams of highly skilled, creative talent who continue to earn a reputation unparalleled in the entertainment industry.
+		</div>
+   	</div>
+    </div>
+<!--NBC New York End-->
+</div>
+</div>
+</div>
+<!--wrapper section end--->
+
+<!--footer section-->
+<script language="javascript">aboutUsFooter()</script>
+<!--footer section end-->
+</body>
+</html>

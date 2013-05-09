@@ -1,0 +1,129 @@
+@charset "UTF-8";
+body {
+	-webkit-backface-visibility: hidden;
+}
+.animated {
+	-webkit-animation-duration: 0.3s;
+	   -moz-animation-duration: 0.3s;
+	     -o-animation-duration: 0.3s;
+	        animation-duration: 0.3s;
+	-webkit-animation-fill-mode: both;
+	   -moz-animation-fill-mode: both;
+	     -o-animation-fill-mode: both;
+	        animation-fill-mode: both;
+}
+
+.animated.hinge {
+    /*	-webkit-animation-duration: 2s;*/
+	   -moz-animation-duration: 2s;
+	     -o-animation-duration: 2s;
+	        animation-duration: 2s;
+}
+
+@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(0.5); }
+	50% { -webkit-transform: scale(1.2); }
+    100% { -webkit-transform: scale(1); }
+}
+
+.pulse {
+	-webkit-animation-name: pulse;
+	-moz-animation-name: pulse;
+	-o-animation-name: pulse;
+	animation-name: pulse;
+}
+
+@-webkit-keyframes bounceInRight {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateX(0px);
+	}
+	
+	0.1% {
+		opacity: 0;
+		-webkit-transform: translateX(500px);
+	}
+	
+	60% {
+        opacity: 1;
+
+		-webkit-transform: translateX(0px);
+	}
+	
+	100% {
+		-webkit-transform: translateX(0);
+	}
+}
+
+@-moz-keyframes bounceInRight {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateX(0px);
+	}
+	
+	0.1% {
+		opacity: 0;
+		-webkit-transform: translateX(500px);
+	}
+	
+	60% {
+        opacity: 1;
+        
+		-webkit-transform: translateX(0px);
+	}
+	
+	100% {
+		-webkit-transform: translateX(0);
+	}
+}
+
+@-o-keyframes bounceInRight {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateX(0px);
+	}
+	
+	0.1% {
+		opacity: 0;
+		-webkit-transform: translateX(500px);
+	}
+	
+	60% {
+        opacity: 1;
+        
+		-webkit-transform: translateX(0px);
+	}
+	
+	100% {
+		-webkit-transform: translateX(0);
+	}
+}
+
+@keyframes bounceInRight {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateX(0px);
+	}
+	
+	0.1% {
+		opacity: 0;
+		-webkit-transform: translateX(500px);
+	}
+	
+	60% {
+        opacity: 1;
+        
+		-webkit-transform: translateX(0px);
+	}
+	
+	100% {
+		-webkit-transform: translateX(0);
+	}
+}
+
+.bounceInRight {
+	-webkit-animation-name: bounceInRight;
+	-moz-animation-name: bounceInRight;
+	-o-animation-name: bounceInRight;
+	animation-name: bounceInRight;
+}

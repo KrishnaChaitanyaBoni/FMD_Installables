@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+<title>Universal Studios - Production Service</title>
+    <link href="../css/services/productionStyle.css" rel="stylesheet" type="text/css" />
+    <link href="../css/common/common.css" rel="stylesheet" type="text/css" />
+    <link href="../css/common/gradients.css" rel="stylesheet" type="text/css" />
+<link href="../css/animate/animate.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/lib/cordova-1.9.0.js"></script>
+<script type="text/javascript" src="../js/lib/ChildBrowser.js"></script>
+<script type="text/javascript" src="../js/lib/ChildBrowser_android.js"></script>
+<script src="../js/lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery.slimscroll.js"></script>
+    <script src="../js/service/constants.js"></script>
+
+<script src="../js/ui/navigation.js"></script>
+<script src="../js/ui/footer.js"></script>
+<script src="../js/db/dBHelper.js"></script>
+<script src="../js/service/backlot.js"></script>
+<script src="../js/service/directoryServices.js"></script>
+<script src="../js/lib/SMSComposer.js"></script>
+<script src="../js/lib/EmailComposer.js"></script>
+<script src="../js/lib/Screenshot.js"></script>
+<script>$(document).ready(function(){getPlatform();$("footer nav .facilityHome a").addClass("facilityHomeHover");
+                          $(".backlotBackV2").bind('touchstart', function(){
+                                                   $(".backlotBackV2").addClass("backlotBackV2Roll");setTimeout(function () {$(".backlotBackV2").removeClass("backlotBackV2Roll")},200);
+                                                   });
+                          
+                          $(".backlotHeadericonV2").bind('touchstart', function(){
+                                                         $(".backlotHeadericonV2").addClass("backlotHeadericonV2Roll");setTimeout(function () {$(".backlotHeadericonV2").removeClass("backlotHeadericonV2Roll")},200);
+                                                         });
+                          setTimeout(function () {
+                                     $(".uniHighlight  ul li .locationBtn a").bind('touchstart', function(){
+                                                                                   $(this).addClass("locationBtnV2Roll");setTimeout(function () {$(".uniHighlight ul li .locationBtn a").removeClass("locationBtnV2Roll")},200);
+                                                                                   });
+                                     
+                                     $(".uniHighlight ul li .smsBtn a").bind('touchstart', function(){
+                                                                             
+                                                                             $(this).addClass("smsBtnV2Roll");setTimeout(function () {$(".uniHighlight ul li .smsBtn a").removeClass("smsBtnV2Roll")},200);
+                                                                             });
+                                     $(".uniHighlight ul li .addBtn a").bind('touchstart', function(){
+                                                                             
+                                                                          $(this).addClass("addBtnV2Roll");setTimeout(function () {$(".uniHighlight ul li .addBtn a").removeClass("addBtnV2Roll")},200);
+                                                                          });
+                                     
+                                     },2000);
+                          });
+    </script>
+</head>
+
+<body onload="showDepartmentServicesData();">
+
+<!--Header section-->
+    <header class="uniTXTColor">
+        <div class="headergradiant headerInnerCover">
+            <div id="headerBackHideDiv" class="headerBackHide"></div>
+            
+            <div  id="backButtonDiv" class="headerBack backlotBackV2" onclick="javascript:history.back()"></div>
+            <span class="headings">Universal Studios</span>
+            <div class="headerIcon"><a class="backlotHeadericonV2"></a></div>
+        </div>
+        <div class="trvGameHDgradient font16B" id="departmentName">
+            
+        </div>
+        <!--Header nav popup-->
+        <div class="homeNav">
+            <div class="homeNavinner">
+                <div class="homeNavArrow"><img src="../images/common/homeNavArrow.png"/></div>
+                <div class="homeNavChicago" >Chicago</div>
+                <div class="homeNavNewyork" >New York</div>
+            </div>
+        </div>
+        <!--Header nav popup end-->
+    </header>
+
+<!--Header section end-->
+
+<!--wrapper section--->
+<div id="wrapper" class="trvwrapperTop UniWrapperBG">
+ <div id="scrollDiv">
+
+    <div class="proListcover uniHighlight">
+		<ul id="loadUnivStudiosProductionServicesResults">
+          
+          
+		</ul>
+    </div>
+    	
+</div>
+</div>
+<!--wrapper section end--->
+<script>
+setTimeout(function() {
+
+$(function(){
+
+      $('#descriptionScroll').slimscroll(
+	  {allowPageScroll: true}
+	  );
+    });
+}, 5000);
+
+</script>
+<!--footer section-->
+<script language="javascript">loadFooter()</script>
+<!--footer section end-->
+
+</body>
+</html>

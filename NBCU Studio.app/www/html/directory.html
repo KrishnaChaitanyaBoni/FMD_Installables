@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+<title>Universal Studios - Directory</title>
+    <link href="../css/common/common.css" rel="stylesheet" type="text/css" />
+    <link href="../css/services/directoryStyle.css" rel="stylesheet" type="text/css" />
+    <link href="../css/common/gradients.css" rel="stylesheet" type="text/css" />
+<link href="../css/animate/animate.css" rel="stylesheet" type="text/css" />    
+<script src="../js/lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/lib/cordova-1.9.0.js"></script>
+<script type="text/javascript" src="../js/lib/ChildBrowser.js"></script>
+<script type="text/javascript" src="../js/lib/ChildBrowser_android.js"></script>
+<script type="text/javascript" src="../js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery.slimscroll.js"></script>
+    <script src="../js/service/constants.js"></script>
+
+<script src="../js/ui/navigation.js"></script>
+<script src="../js/ui/footer.js"></script>
+<script src="../js/db/dBHelper.js"></script>
+<script src="../js/service/directoryServices.js"></script>
+<script type="text/javascript" src="../js/lib/EmailComposer.js"></script>
+<script src="../js/lib/SMSComposer.js"></script>
+<script src="../js/lib/Screenshot.js"></script>
+<script>$(document).ready(function(){
+                      
+                          setTimeout( function(){
+                                     $("footer nav .directory a").addClass("directoryHover");
+                                     }, 200);
+                          getPlatform();
+                          if(localStorage.getItem("CurPage")=="universalLanding.html"){
+                          $("#uni").hide();
+                          $("#chi").show();
+                          $("#new").show();
+                          }else if(localStorage.getItem("CurPage")=="chicagoLanding.html"){
+                          $("#uni").show();
+                          $("#chi").hide();
+                          $("#new").show();
+                          }
+                          else {
+                          $("#uni").show();
+                          $("#chi").show();
+                          $("#new").hide();
+                          }
+                          $(".dirBack").bind('touchstart', function(){
+                                             $(".dirBack").addClass("dirBackRoll");setTimeout(function () {$(".dirBack").removeClass("dirBackRoll")},200);
+                                             });
+                          
+                          $(".dirHome").bind('touchstart', function(){
+                                             $(".dirHome").addClass("dirHomeRoll");setTimeout(function () {$(".dirHome").removeClass("dirHomeRoll")},200);
+                                             });
+                          
+                          $(".dirSearch").bind('touchstart', function(){
+                                               $(".dirSearch").addClass("dirSearchRoll");setTimeout(function () {$(".dirSearch").removeClass("dirSearchRoll")},200);
+                                               });
+                          setTimeout(function () {
+                                     
+                                     $(".dirListcover ul li .smsBtn a").bind('touchstart', function(){
+                                                                             $(this).addClass("dirsmsBtnV2Roll");setTimeout(function () {$(".dirListcover ul li .smsBtn a").removeClass("dirsmsBtnV2Roll")},200);
+                                                                             });
+                                     
+                                     $(".dirListcover ul li .addBtn a").bind('touchstart', function(){
+                                                                             $(this).addClass("diraddBtnV2Roll");setTimeout(function () {$(".dirListcover ul li .addBtn a").removeClass("diraddBtnV2Roll")},200);
+                                                                             });
+                                     
+                                     },2000);
+                          
+                          });
+    </script>
+</head>
+
+<body onload="initDB();showUniversalStudiosDirectoryRecords();showNBCNewYorkDirectoryRecords();showNBCChicagoDirectoryRecords();">
+<!--Header section-->
+    <header class="headergradiant">
+        <div class="headerInnerCover">
+            <div id="headerBackHideDiv" class="headerBackHide"></div>
+            
+            <div id="backButtonDiv" class="headerBack dirBack" onclick='backBtnNav();'></div>
+            <span class="headings dirTitleColor">Directory</span>
+            
+            <div class="headerIcon dirHome" ></div>
+            <div class="dirSearch dirSearchclk" onclick="validateAndSearch();" style="float:right;"></div>
+            <div class="searchCover"><form action="#" onsubmit="return false;"><input id="searchKeyword" onkeypress="detectEnterKeyPress(event);" name="search" class="headersearch" type="search" placeholder="Search" autofocus="autofocus" ></form></div>
+            
+            
+            
+        </div>
+        <!--Header nav popup-->
+        <div class="homeNav">
+            <div class="homeNavinner">
+                <div class="homeNavArrow"><img src="../images/common/homeNavArrow.png"/></div>
+                <div id="uni" class="homeNavUniversal" >Universal Studios</div>
+                <div id="chi" class="homeNavChicago" >Chicago</div>
+                <div id="new" class="homeNavNewyork" >New York</div>
+            </div>
+        </div>
+        <!--Header nav popup end-->
+    </header><!--Header section end-->
+
+<!--wrapper section--->
+<div id="wrapper" class="dirBckGrnd">
+<div class="wrapperinner" id="dirLocationResults">
+
+<div class="navcover320">
+	<div class="dirNav">
+   		<ul>
+    		<li><a onclick="setCurrentPageUniversal()" class="dirBtnGrnt_blue">Universal Studios</a></li>
+    		<li><a onclick="setCurrentPageChicago()" class="dirBtnGrnt_grey">NBC Chicago</a></li>
+    		<li><a onclick="setCurrentPageNewyork()" class="dirBtnGrnt_grey">NBC New York</a></li>
+    	</ul>
+    </div>
+    </div>
+    <!--Universal Studios Start-->
+    <div class="dirListcover UniCA diriPhone">
+	    <div id="scrollDiv1">
+		<ul id="loadUnivStudiosResults">
+			           
+		</ul>
+		</div>
+    </div>
+    <!--Universal Studios end-->
+    
+     <!--NBC Chicago Start-->
+    <div class="dirListcover NBCchicago diriPhone">
+	    <div id="scrollDiv2">
+		<ul id="loadNBCChicagoResults">  
+			           
+		</ul>
+		</div>
+    </div>
+    <!--NBC Chicago end-->
+    
+     <!--NBC New York Start-->
+    <div class="dirListcover NBCnewyork diriPhone">
+	 <div id="scrollDiv3">
+		<ul id="loadNBCNewYorkResults">
+           
+		</ul>
+		</div>
+    </div>
+	
+    <!--NBC New York end-->
+    </div>	
+	<div class="wrapperinner dirSearchBG" id="dirSearchResults">
+	
+	<div class="dirListcover dirsearchListcover dirSearchiPhone dirSearchiPhn">
+        <div id="scrollDiv4">
+            <h3>Directory Search Results</h3>
+	 		<ul id="loadSearchResults">
+			
+           	</ul>
+		</div>
+    </div>
+	</div>
+</div>
+
+
+<!--wrapper section end--->
+
+<!--footer section-->
+<script language="javascript">
+	var curPage = localStorage.getItem("CurPage");
+	if(curPage == "universalLanding.html")
+	{
+		loadFooter();	
+	}
+	else
+	{
+		loadMapNyChDisabledFooter();	
+	}
+	</script>
+<!--footer section end-->
+</body>
+</html>
+
